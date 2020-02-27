@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="145px" viewBox="0 0 145 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>projects/wordbase/logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="145" height="145" rx="20"></rect>
+    </defs>
+    <g id="projects/wordbase/logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="mask" fill="#F3F3F3" xlink:href="#path-1"></use>
+            <path d="M72,-35 L151,-35 L151,74 L78.0026812,74 C74.6874919,74 72,71.305603 72,68.0039306 L72,-35 Z" id="orange" fill="#FE8800" mask="url(#mask-2)"></path>
+            <path d="M-7,74 L65.9973188,74 C69.3125081,74 72,76.694397 72,79.9960694 L72,183 L-7,183 L-7,74 Z" id="blue" fill="#00C9E8" mask="url(#mask-2)"></path>
+            <g id="eyes-blue" mask="url(#mask-2)" stroke="#FFFFFF" stroke-width="6">
+                <g transform="translate(13.000000, 100.000000)" id="Oval">
+                    <circle cx="7" cy="7" r="7"></circle>
+                    <circle cx="35" cy="7" r="7"></circle>
+                </g>
+            </g>
+            <g id="eyes-orange" mask="url(#mask-2)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+                <g transform="translate(83.000000, 38.000000)" id="Oval-2">
+                    <path d="M50,10 C50,4.4771525 45.5228475,0 40,0 C34.4771525,0 30,4.4771525 30,10"></path>
+                    <path d="M20,10 C20,4.4771525 15.5228475,0 10,0 C4.4771525,0 0,4.4771525 0,10"></path>
+                </g>
+            </g>
+            <path d="M134.438972,95.9706366 C134.438972,100.656879 134.438972,106 134.438972,112 C134.438972,121 133.612502,126.387309 129.5,130.5 C125.387498,134.612691 116.5,134.5 111.940002,134.5 C108.900004,134.5 89.3762142,134.5 53.3686329,134.5 C50.3310668,134.5 47.8686329,136.962434 47.8686329,140 C47.8686329,143.037566 50.3310668,145.5 53.3686329,145.5 L92.6538025,145.5 L131.938972,145.5 C139.394816,145.5 145.438972,139.455844 145.438972,132 L145.438972,95.9706366 C145.438972,92.9330705 142.976538,90.4706366 139.938972,90.4706366 C136.901406,90.4706366 134.438972,92.9330705 134.438972,95.9706366 Z" id="arm" fill="#00C9E8" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            <path d="M85.4389721,2.97063658 C85.4389721,7.65687886 85.4389721,13 85.4389721,19 C85.4389721,28 84.6125024,33.3873093 80.5,37.5 C76.3874976,41.6126907 67.5,41.5 62.9400024,41.5 C59.9000041,41.5 40.3762142,41.5 4.36863292,41.5 C1.3310668,41.5 -1.13136708,43.9624339 -1.13136708,47 C-1.13136708,50.0375661 1.3310668,52.5 4.36863292,52.5 L43.6538025,52.5 L82.9389721,52.5 C90.3948163,52.5 96.4389721,46.4558441 96.4389721,39 L96.4389721,2.97063658 C96.4389721,-0.0669295478 93.9765383,-2.52936342 90.9389721,-2.52936342 C87.901406,-2.52936342 85.4389721,-0.0669295478 85.4389721,2.97063658 Z" id="arm" fill="#FE8800" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(47.653803, 24.985318) rotate(-180.000000) translate(-47.653803, -24.985318) "></path>
+        </g>
+    </g>
+</svg>

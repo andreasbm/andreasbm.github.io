@@ -1,0 +1,28 @@
+{
+	"name": "andreas",
+	"version": "1.0.0",
+	"scripts": {
+		"serve": "http-server --push-state -o -c-1 -p 1200 -a localhost",
+		"s": "npm run serve",
+		"snowpack": "npx snowpack --optimize",
+		"postinstall": "npm run snowpack"
+	},
+	"dependencies": {
+		"web-dialog": "^0.0.8",
+		"lit-element": "^2.2.1"
+	},
+	"devDependencies": {
+		"snowpack": "^1.4.0"
+	},
+	"snowpack": {
+		"dedupe": [
+			"lit-html"
+		],
+		"webDependencies": [
+			"lit-html",
+			"lit-element",
+			"web-dialog",
+			"lit-html/directives/repeat.js"
+		]
+	}
+}

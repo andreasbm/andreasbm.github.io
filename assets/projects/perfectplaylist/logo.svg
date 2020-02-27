@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>projects/perfectplaylist/logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="projects/perfectplaylist/logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-14" fill-rule="nonzero">
+            <rect id="Rectangle-3" stroke="#000000" stroke-width="9" fill="#F9F9FA" x="4.5" y="4.5" width="391" height="391" rx="84"></rect>
+            <g id="Group" transform="translate(97.175141, 115.254237)">
+                <g id="Group-2" fill="#191414">
+                    <rect id="Rectangle-path" x="0" y="67.7966102" width="203.389831" height="33.8983051" rx="6"></rect>
+                    <rect id="Rectangle-path" x="0" y="0" width="203.389831" height="33.8983051" rx="6"></rect>
+                    <rect id="Rectangle-path" x="0" y="137.853107" width="140.112994" height="33.8983051" rx="6"></rect>
+                </g>
+                <path d="M204.583644,153.023238 C208.350974,144.094031 216.957214,137.854974 226.967334,137.854974 C240.451687,137.854974 250.163109,149.390322 251.384037,163.137902 C251.384037,163.137902 252.04304,166.550528 250.592487,172.694375 C248.617346,181.061656 243.974458,188.495505 237.714865,194.168902 L204.583644,223.728814 L172.010616,194.167035 C165.751023,188.495505 161.108135,181.059789 159.132994,172.692508 C157.682441,166.548661 158.341444,163.136035 158.341444,163.136035 C159.562372,149.388455 169.273794,137.853107 182.758147,137.853107 C192.770134,137.853107 200.816315,144.094031 204.583644,153.023238 Z" id="Shape" fill="#1DB954"></path>
+            </g>
+        </g>
+    </g>
+</svg>

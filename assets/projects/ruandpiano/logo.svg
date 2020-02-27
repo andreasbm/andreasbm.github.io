@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>projects/ruandpiano/logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="200" cy="200" r="200"></circle>
+    </defs>
+    <g id="projects/ruandpiano/logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-1" fill="#151515" cx="200" cy="200" r="200"></circle>
+        <g id="Group">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g mask="url(#mask-2)">
+                <g transform="translate(200.000000, 96.069869) rotate(-180.000000) translate(-200.000000, -96.069869) translate(115.283843, -57.641921)">
+                    <rect id="Rectangle-8" fill="#FFFFFF" x="0" y="1.92391373" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-9" fill="#FFFFFF" x="59.7996404" y="0.873362445" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-10" fill="#FFFFFF" x="119.599281" y="0.873362445" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-11" fill="#151515" x="88.7027999" y="95.1965066" width="49.8330337" height="210.480349" rx="8"></rect>
+                    <rect id="Rectangle-12" fill="#151515" x="28.9031595" y="96.069869" width="49.8330337" height="210.480349" rx="8"></rect>
+                </g>
+            </g>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(378.165939, 95.196507) rotate(-180.000000) translate(-378.165939, -95.196507) translate(293.449782, -57.641921)">
+                    <rect id="Rectangle-9" fill="#FFFFFF" x="59.7996404" y="-0.873362445" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-10" fill="#FFFFFF" x="119.599281" y="-0.873362445" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-11" fill="#151515" x="88.7027999" y="93.4497817" width="49.8330337" height="210.480349" rx="8"></rect>
+                    <rect id="Rectangle-12" fill="#151515" x="28.9031595" y="94.3231441" width="49.8330337" height="210.480349" rx="8"></rect>
+                </g>
+            </g>
+            <g id="Group-2" mask="url(#mask-2)">
+                <g transform="translate(21.834061, 95.196507) rotate(-180.000000) translate(-21.834061, -95.196507) translate(-62.882096, -57.641921)">
+                    <rect id="Rectangle-8" fill="#FFFFFF" x="-1.42108547e-14" y="0.177188843" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-9" fill="#FFFFFF" x="59.7996404" y="-0.873362445" width="49.8330337" height="253.18286" rx="8"></rect>
+                    <rect id="Rectangle-11" fill="#151515" x="88.7027999" y="93.4497817" width="49.8330337" height="210.480349" rx="8"></rect>
+                    <rect id="Rectangle-12" fill="#151515" x="28.9031595" y="94.3231441" width="49.8330337" height="210.480349" rx="8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

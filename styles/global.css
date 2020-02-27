@@ -1,0 +1,84 @@
+html {
+	font-family: "Rubik", sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	line-height: var(--line-height-m);
+	font-weight: var(--font-weight-m);
+
+	--light: #FFFFFF;
+	--dark: #0D0E34;
+
+	--foreground: var(--dark);
+	--background: var(--light);
+
+	--space-400: #3D3E5D;
+	--space-500: #0D0E34;
+	--space-600: #0A0B2A;
+	--space-400-contrast: var(--light);
+	--space-500-contrast: var(--light);
+	--space-600-contrast: var(--light);
+
+	--blue-400: #8A8FE2;
+	--blue-500: #6D73DB;
+	--blue-600: #575CAF;
+	--blue-400-contrast: var(--light);
+	--blue-500-contrast: var(--light);
+	--blue-600-contrast: var(--light);
+
+	--green-400: #79D4A2;
+	--green-500: #58C989;
+	--green-600: #46A16F;
+	--green-400-contrast: var(--light);
+	--green-500-contrast: var(--light);
+	--green-600-contrast: var(--light);
+
+	--red-400: #D06D35;
+	--red-500: #C44801;
+	--red-600: #9E3B01;
+	--red-400-contrast: var(--light);
+	--red-500-contrast: var(--light);
+	--red-600-contrast: var(--light);
+
+	--yellow-400: #FEEF7E;
+	--yellow-500: #FDEB5D;
+	--yellow-600: #CBBC4A;
+	--yellow-400-contrast: var(--dark);
+	--yellow-500-contrast: var(--dark);
+	--yellow-600-contrast: var(--dark);
+
+	--container-width-s: 500px;
+	--container-width-m: 900px;
+	--container-width-l: 1100px;
+
+	--spacing-xxs: 4px;
+	--spacing-xs: 6px;
+	--spacing-s: 8px;
+	--spacing-m: 12px;
+	--spacing-l: 18px;
+	--spacing-xl: 24px;
+	--spacing-xxl: 30px;
+	--spacing-xxxl: 40px;
+	--spacing-xxxxl: 60px;
+	--spacing-xxxxxl: 80px;
+
+	--border-radius-s: 8px;
+	--border-radius-m: 16px;
+	--border-radius-l: 24px;
+
+	--font-size-s: 12px;
+	--font-size-m: 18px;
+	--font-size-l: 30px;
+	--font-size-xl: 40px;
+
+	--font-weight-t: 300;
+	--font-weight-m: 400;
+	--font-weight-b: 500;
+
+	--line-height-m: 1.2em;
+
+	--shadow: 0 2px 12px -2px var(--shadow-color, rgba(22, 22, 22, 0.2));
+}
+
+body {
+	margin: 0;
+}
