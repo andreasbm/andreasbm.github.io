@@ -11,3 +11,7 @@ export const arrowDownIconTemplate = svg`
 export const sendIconTemplate = svg`
 	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="nonzero" d="M.008 14.714L16 7.857.008 1 0 6.333l11.429 1.524L0 9.381z"/></svg>
 `;
+
+export const arrowRightIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/arrow-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path id="icon" fill="#0D0E34" fill-rule="nonzero" d="M12.01 7H0v2h12.01v3L16 8l-3.99-4z"/></g></svg>
+`;

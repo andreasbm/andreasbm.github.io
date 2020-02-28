@@ -7,7 +7,7 @@ class Button extends LitElement {
 			sharedStyles,
 			css`
 				:host {
-					display: flex;
+					display: inline-flex;
 					cursor: pointer;
 					user-select: none;
 				    align-items: center;
