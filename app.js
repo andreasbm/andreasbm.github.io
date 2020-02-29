@@ -75,13 +75,13 @@ class App extends LitElement {
 						<span>See my projects</span>
 						<an-icon .template="${arrowDownIconTemplate}"></an-icon>
 					</an-button>
-					<a id="github-button" href="https://github.com/andreasbm" target="_blank">
+					<a id="github-button" href="https://github.com/andreasbm" target="_blank" rel="noopener">
 						<an-button>
 							<an-icon .template="${githubIconTemplate}"></an-icon>
 							<span>Go to my Github</span>
 						</an-button>
 					</a>
-					<a href="mailto:andmehlsen@gmail.com" target="_blank">
+					<a href="mailto:andmehlsen@gmail.com" target="_blank" rel="noopener" aria-label="Open email">
 						<an-button id="contact-button" style="--background: var(--yellow-500); --foreground: var(--yellow-500-contrast)"  @click="${() => this.scrollTo("contact")}">
 							<span>Contact me</span>
 							<an-icon .template="${sendIconTemplate}"></an-icon>
@@ -109,7 +109,7 @@ class App extends LitElement {
 					name="Ideanote"
 					text="Ideanote is the cloud-based innovation platform that empowers your teams to capture, develop and prioritize more of the right ideas.">
 					<an-buttons slot="footer">
-						<a href="https://ideanote.io" target="_blank">
+						<a href="https://ideanote.io" target="_blank" rel="noopener">
 							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -128,7 +128,7 @@ class App extends LitElement {
 					name="Laser Cat"
 					text="Shoot laser at things you want to remove from the internet.">
 					<an-buttons slot="footer">
-						<a href="https://lasercat.app" target="_blank">
+						<a href="https://lasercat.app" target="_blank" rel="noopener">
 							<an-button style="--background: #8A7533; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -147,7 +147,7 @@ class App extends LitElement {
 					name="Web Skills"
 					text="A visual overview of useful skills to learn as a web developer.">
 					<an-buttons slot="footer">
-						<a href="https://andreasbm.github.io/web-skills" target="_blank">
+						<a href="https://andreasbm.github.io/web-skills" target="_blank" rel="noopener">
 							<an-button style="--background: #028F5D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -166,7 +166,7 @@ class App extends LitElement {
 					name="Perfect Playlist"
 					text="Create the perfect playlist based on you and your friends favorite music.">
 					<an-buttons slot="footer">
-						<a href="https://perfectplaylist.app" target="_blank">
+						<a href="https://perfectplaylist.app" target="_blank" rel="noopener">
 							<an-button style="--background: #1DB954; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -189,7 +189,7 @@ class App extends LitElement {
 							<span>Watch epic battle</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://wordbaseapp.com" target="_blank">
+						<a href="https://wordbaseapp.com" target="_blank" rel="noopener">
 							<an-button style="--background: #FF8800; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -212,7 +212,7 @@ class App extends LitElement {
 							<span>Watch my favorite recording</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://www.youtube.com/user/ruandpiano" target="_blank">
+						<a href="https://www.youtube.com/user/ruandpiano" target="_blank" rel="noopener">
 							<an-button style="--background: #151515; --foreground: var(--light);">
 								<span>Go to Youtube</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>

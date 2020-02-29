@@ -47,25 +47,25 @@ class Social extends LitElement {
 				${this.text != null ? html`<an-text id="text" center margin="xlarge">${this.text}</an-text>` : ""}
 			</div>
 			<an-buttons id="buttons">
-				<a href="https://github.com/andreasbm" target="_blank">
+				<a href="https://github.com/andreasbm" target="_blank" rel="noopener">
 					<an-button style="--background: #0D0E34; --foreground: var(--light);">
 						<an-icon .template="${githubIconTemplate}"></an-icon>
 						<span>Github</span>
 					</an-button>
 				</a>
-				<a href="https://twitter.com/AndreasMehlsen" target="_blank">
+				<a href="https://twitter.com/AndreasMehlsen" target="_blank" rel="noopener">
 					<an-button style="--background: #03A9F4; --foreground: var(--light);">
 						<an-icon .template="${twitterIconTemplate}"></an-icon>
 						<span>Twitter</span>
 					</an-button>
 				</a>
-				<a href="https://open.spotify.com/user/114799118" target="_blank">
+				<a href="https://open.spotify.com/user/114799118" target="_blank" rel="noopener">
 					<an-button style="--background: #1DB954; --foreground: var(--light);">
 						<an-icon .template="${spotifyIconTemplate}"></an-icon>
 						<span>Spotify</span>
 					</an-button>
 				</a>
-				<a href="https://www.linkedin.com/in/andreasmehlsen" target="_blank">
+				<a href="https://www.linkedin.com/in/andreasmehlsen" target="_blank" rel="noopener">
 					<an-button style="--background: #0072B1; --foreground: var(--light);">
 						<an-icon .template="${linkedInIconTemplate}"></an-icon>
 						<span>LinkedIn</span>
