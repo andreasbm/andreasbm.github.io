@@ -17,6 +17,10 @@ class Text extends LitElement {
 			center: {
 				type: Boolean,
 				reflect: true
+			},
+			margin: {
+				type: String,
+				reflect: true
 			}
 		}
 	}
@@ -42,6 +46,18 @@ class Text extends LitElement {
 				
 				:host([center]) {
 					text-align: center;
+				}
+				
+				:host([margin="medium"]) {
+					margin: 0 0 var(--spacing-s);
+				}
+				
+				:host([margin="large"]) {
+					margin: 0 0 var(--spacing-l);
+				}
+				
+				:host([margin="xlarge"]) {
+					margin: 0 0 var(--spacing-xxxl);
 				}
 			`
 		];

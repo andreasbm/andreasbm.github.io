@@ -11,6 +11,17 @@ html {
 	--foreground: var(--dark);
 	--background: var(--light);
 
+	--shade-700: #565671;
+	--shade-600: #86889B;
+	--shade-500: #B6B7C2;
+	--shade-400: #E7E7EB;
+	--shade-300: #F5F5F5;
+	--shade-700-contrast: var(--light);
+	--shade-600-contrast: var(--light);
+	--shade-500-contrast: var(--light);
+	--shade-400-contrast: var(--dark);
+	--shade-300-contrast: var(--dark);
+
 	--space-400: #3D3E5D;
 	--space-500: #0D0E34;
 	--space-600: #0A0B2A;
@@ -65,10 +76,10 @@ html {
 	--border-radius-m: 16px;
 	--border-radius-l: 24px;
 
-	--font-size-s: 12px;
-	--font-size-m: 18px;
-	--font-size-l: 30px;
-	--font-size-xl: 40px;
+	--font-size-s: 0.75rem;
+	--font-size-m: 1.2rem;
+	--font-size-l: 1.8rem;
+	--font-size-xl: 2.5rem;
 
 	--font-weight-t: 300;
 	--font-weight-m: 400;
@@ -82,3 +93,26 @@ html {
 body {
 	margin: 0;
 }
+
+@media (max-width: 800px) {
+	html {
+		--font-size-s: 0.6rem;
+		--font-size-m: 1rem;
+		--font-size-l: 1.4rem;
+		--font-size-xl: 1.8rem;
+
+		--spacing-xl: 22px;
+		--spacing-xxl: 24px;
+		--spacing-xxxl: 28px;
+		--spacing-xxxxl: 32px;
+		--spacing-xxxxxl: 36px;
+	}
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*	html {*/
+/*		--background: #000000;*/
+/*		--foreground: var(--light);*/
+/*		--shadow-color: rgba(255, 255, 255, 0.2);*/
+/*	}*/
+/*}*/

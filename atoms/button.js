@@ -14,7 +14,6 @@ class Button extends LitElement {
 			        justify-content: center;
                     line-height: 1;
                     text-decoration: none;
-					font-weight: var(--font-weight-m);
 					padding: var(--spacing-m) var(--spacing-xxl);
 					background: var(--background);
 					color: var(--foreground);
@@ -25,10 +24,15 @@ class Button extends LitElement {
 					text-transform: uppercase;
 					overflow: hidden;
                     text-overflow: ellipsis;
+                    outline: none;
 				}
 				
-				:host(:hover) {
+				:host(:hover), :host(:focus-visible) {
 					transform: scale(1.06);
+				}
+				
+				:host(:focus-visible) {
+					box-shadow: 0 0 0 3px var(--red-500);	
 				}
 				
 				::slotted(an-icon) {
@@ -40,6 +44,12 @@ class Button extends LitElement {
 				}
 			`
 		];
+	}
+
+	constructor () {
+		super();
+		this.tabIndex = 0;
+		this.role = "button";
 	}
 
 	render () {

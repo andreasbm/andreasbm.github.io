@@ -53,8 +53,8 @@ class Project extends LitElement {
 				}
 				
 				#content {
-					background: var(--background);
-					color: var(--foreground);
+					background: var(--light);
+					color: var(--dark);
 					border-radius: var(--border-radius-m);
 					padding: var(--spacing-xxxl);
 					box-shadow: var(--shadow);
@@ -100,6 +100,13 @@ class Project extends LitElement {
 					display: flex;
 					align-items: center;
 					justify-content: flex-end;
+				}
+				
+				@media (max-width: 800px) {
+					#date {
+					    left: 50%;
+                        transform: translateX(-50%);
+					}
 				}
 			`
 		];

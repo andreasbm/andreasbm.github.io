@@ -24,7 +24,8 @@ class Header extends LitElement {
 
 				#header {
 					width: 100%;
-					height: 600px;
+				    height: 80vh;
+                    min-height: 450px;
 					background: var(--space-500);
 					color: var(--space-500-contrast);
 					display: flex;
@@ -59,6 +60,7 @@ class Header extends LitElement {
 				#avatar {
 					animation: scale 4s ease-in-out infinite;
 					margin: 0 0 var(--spacing-m);
+					width: 140px;
 				}
 				
 				::slotted([slot="footer"]) {
@@ -70,6 +72,7 @@ class Header extends LitElement {
 					justify-content: center;
 					align-items: center;
 					width: 100%;
+				    padding: 0 var(--spacing-l);
 				}
 				
 				#buttons > :not(:last-child) {

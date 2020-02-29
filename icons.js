@@ -17,5 +17,17 @@ export const arrowRightIconTemplate = svg`
 `;
 
 export const videoIconTemplate = svg`
-	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"<g id="icons/video" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M12.444 7V3.889c0-.489-.4-.889-.888-.889H.889C.4 3 0 3.4 0 3.889v8.889c0 .489.4.889.889.889h10.667c.488 0 .888-.4.888-.89v-3.11L16 13.222V3.444L12.444 7z" id="icon" fill="currentColor" fill-rule="nonzero"/></g></svg>
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/video" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M12.444 7V3.889c0-.489-.4-.889-.888-.889H.889C.4 3 0 3.4 0 3.889v8.889c0 .489.4.889.889.889h10.667c.488 0 .888-.4.888-.89v-3.11L16 13.222V3.444L12.444 7z" id="icon" fill="currentColor" fill-rule="nonzero"/></g></svg>
+`;
+
+export const twitterIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/twitter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M16 2.57a6.736 6.736 0 01-1.89.528 3.315 3.315 0 001.443-1.85 6.479 6.479 0 01-2.08.81A3.258 3.258 0 0011.077 1C9.261 1 7.799 2.503 7.799 4.346c0 .265.022.52.076.763-2.727-.136-5.14-1.469-6.761-3.5a3.419 3.419 0 00-.449 1.692c0 1.158.585 2.185 1.457 2.78A3.191 3.191 0 01.64 5.669v.036c0 1.626 1.137 2.976 2.628 3.287-.267.074-.558.11-.86.11-.21 0-.422-.012-.621-.057.425 1.325 1.631 2.299 3.065 2.33A6.51 6.51 0 010 12.756a9.105 9.105 0 005.032 1.501c6.036 0 9.336-5.099 9.336-9.518 0-.148-.005-.291-.012-.433A6.617 6.617 0 0016 2.57z" id="icon" fill="currentColor" fill-rule="nonzero"/></g></svg>
+`;
+
+export const spotifyIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/spotify" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M7.997 0C3.587 0 0 3.588 0 7.998 0 12.41 3.587 16 7.997 16 12.41 16 16 12.41 16 7.998 16 3.588 12.41 0 7.997 0zM3.939 10.936a9.698 9.698 0 012.825-.425c1.61 0 3.198.408 4.595 1.18.083.045.159.195.192.381.034.186.02.378-.034.478a.407.407 0 01-.556.16 8.738 8.738 0 00-6.776-.69.406.406 0 01-.514-.268c-.072-.234.076-.753.268-.816zm-.35-2.946a12.103 12.103 0 013.175-.424c1.929 0 3.844.467 5.54 1.35a.498.498 0 01.212.673c-.152.297-.329.496-.441.496a.512.512 0 01-.232-.057 10.886 10.886 0 00-5.08-1.236c-.998 0-1.977.131-2.91.39a.499.499 0 01-.613-.35c-.075-.281.096-.773.35-.842zM3.5 6.065a.587.587 0 01-.715-.428c-.082-.332.126-.717.426-.793a14.91 14.91 0 013.553-.432c2.3 0 4.504.517 6.55 1.537a.592.592 0 01.267.794c-.096.192-.303.398-.531.398a.616.616 0 01-.258-.058 13.35 13.35 0 00-6.028-1.417c-1.09 0-2.188.134-3.264.399z" id="icon" fill="currentColor" fill-rule="nonzero"/></g></svg>	
+`;
+
+export const linkedInIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/linkedin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M13.656 0H2.344A2.347 2.347 0 000 2.344v11.312A2.347 2.347 0 002.344 16h11.312A2.347 2.347 0 0016 13.656V2.344A2.347 2.347 0 0013.656 0zM6 13H4V6h2v7zm0-8H4V3h2v2zm7 8h-2V9c0-.551-.449-1-1-1-.551 0-1 .449-1 1v4H7V6h2v.377C9.524 6.214 9.864 6 10.5 6c1.356.001 2.5 1.218 2.5 2.656V13z" id="Shape" fill="currentColor" fill-rule="nonzero"/></g></svg>
 `;
