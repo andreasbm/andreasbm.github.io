@@ -4,6 +4,8 @@
 	"scripts": {
 		"serve": "http-server --push-state -o -c-1 -p 1200 -a localhost",
 		"s": "npm run serve",
+		"b": "NODE_ENV=production parcel build index.html",
+		"deploy": "",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack"
 	},
@@ -12,6 +14,7 @@
 		"web-dialog": "0.0.8"
 	},
 	"devDependencies": {
+		"parcel-bundler": "^1.12.4",
 		"snowpack": "^1.4.0"
 	},
 	"snowpack": {
