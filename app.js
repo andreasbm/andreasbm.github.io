@@ -18,6 +18,7 @@ import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
 
 const PROJECT_ASSETS_BASE_PATH = `/assets/projects`;
+const GA_MEASUREMENT_ID = "UA-96179028-10";
 
 function projectPath (id, extra) {
 	return `${PROJECT_ASSETS_BASE_PATH}/${id}${extra != null ? `/${extra}` : ""}`;
@@ -53,6 +54,20 @@ class App extends LitElement {
 		];
 	}
 
+	constructor  () {
+		super();
+
+		// Track page view (we only have this one page)
+		gtag("config", GA_MEASUREMENT_ID, {
+			"page_path": location.pathname,
+			"page_location": location.href
+		});
+	}
+
+	/**
+	 * Scrolls to a section of the page.
+	 * @param id
+	 */
 	scrollTo (id) {
 		let $elem = null;
 		switch (id) {

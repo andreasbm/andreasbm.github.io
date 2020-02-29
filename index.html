@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96179028-10"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		// Disable GA on localhost
+		const disableGtag = location.hostname === `localhost`;
+		if (disableGtag) {
+			window["ga-disable-UA-96179028-10"] = true;
+		}
+
+		// Setup gtag
+		window.gtag = function () {
+			if (disableGtag) {
+				console.log("Track", arguments);
+			} else {
+				dataLayer.push(arguments);
+			}
+		};
+
+		gtag('js', new Date());
+		gtag('config', 'UA-96179028-10', {"send_page_view": false});
+	</script>
 
 	<!--<base href="/web-skills/" />-->
-	<title>Andreas</title>
+	<title>Andreas Mehlsen</title>
 
 	<!-- Charset -->
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-	<!-- The theme color for the app -->
-	<meta name="theme-color" content="#0D0E34">
-
 	<!-- The viewport meta tag -->
-	<meta name="viewport" content="initial-scale=1, minimum-scale = 1, maximum-scale=5, user-scalable=yes, width=device-width"/>
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes, width=device-width"/>
 
 	<!-- Mobile-friendly iOS meta tags -->
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -25,20 +45,62 @@
 	<!-- Mobile-friendly MS meta tags -->
 	<meta name="msapplication-tap-highlight" content="no">
 
+	<!-- Meta -->
+	<meta name="title" content="Andreas Mehlsen">
+	<meta name="description" content="Hi, I'm Andreas. I love building awesome things for the web.">
+	<meta name="keywords" content="web developer, andreas mehlsen, github, projects">
+	<link href="https://andreasbm.github.io" rel="author"/>
+	<link href="https://andreasbm.github.io" rel="canonical"/>
+
+	<!-- Facebook -->
+	<meta property="og:image:height" content="422">
+	<meta property="og:image:width" content="806">
+	<meta property="og:title" content="Andreas Mehlsen">
+	<meta property="og:description" content="Hi, I'm Andreas. I love building awesome things for the web.">
+	<meta property="og:url" content="https://andreasbm.github.io/">
+	<meta property="og:image" content="https://andreasbm.github.io/assets/www/og-image.jpg">
+	<meta property="og:locale" content="en">
+
+	<!-- Twitter -->
+	<meta name="twitter:url" content="https://andreasbm.github.io">
+	<meta name="twitter:description" content="Hi, I'm Andreas. I love building awesome things for the web.">
+	<meta name="twitter:card" content="Hi, I'm Andreas. I love building awesome things for the web.">
+	<meta name="twitter:title" content="Andreas Mehlsen">
+	<meta name="twitter:site" content="@andreasmehlsen">
+	<meta name="twitter:image" content="https://andreasbm.github.io/assets/www/og-image.jpg">
+
+	<!-- Google + -->
+	<meta itemprop="name" content="Andreas Mehlsen">
+	<meta itemprop="description" content="Hi, I'm Andreas. I love building awesome things for the web.">
+	<meta itemprop="image" content="https://andreasbm.github.io/assets/www/og-image.jpg">
+
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/www/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/www/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/www/favicon-16x16.png">
+	<link rel="manifest" href="/assets/www/site.webmanifest">
+	<link rel="mask-icon" href="/assets/www/safari-pinned-tab.svg" color="#0d0e34">
+	<link rel="shortcut icon" href="/assets/www/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="/assets/www/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
+
+	<!-- Preloading -->
 	<link rel="modulepreload" href="app.js" crossorigin="anonymous">
 
 	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
-<!-- Polyfills -->
-<!--<script crossorigin src="https://polyfill.app/api/polyfill?features=es,template,shadow-dom,custom-elements,resizeobserver"></script>-->
+	<!-- Polyfills -->
+	<!--<script crossorigin src="https://polyfill.app/api/polyfill?features=es,template,shadow-dom,custom-elements,resizeobserver"></script>-->
 
-<!-- Initialize app -->
-<an-app></an-app>
-<script type="module" src="app.js"></script>
+	<!-- Initialize app -->
+	<an-app></an-app>
+	<script type="module" src="app.js"></script>
 
 </body>
 </html>
