@@ -5,7 +5,7 @@
 		"serve": "http-server --push-state -o -c-1 -p 1200 -a localhost",
 		"s": "npm run serve",
 		"b": "NODE_ENV=production parcel build index.html",
-		"deploy": "",
+		"deploy": "git subtree push --prefix dist origin gh-pages",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack"
 	},

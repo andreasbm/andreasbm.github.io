@@ -7,7 +7,6 @@ env.json
 package-lock.json
 
 # compiled output
-/dist
 
 # dependencies
 /node_modules
