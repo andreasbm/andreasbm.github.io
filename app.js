@@ -124,7 +124,7 @@ class App extends LitElement {
 					name="Ideanote"
 					text="Ideanote is the cloud-based innovation platform that empowers your teams to capture, develop and prioritize more of the right ideas.">
 					<an-buttons slot="footer">
-						<an-button style="--background: #F34271; --foreground: var(--light);" @click="${() => showYoutubeVideo({youtubeId: "9M7Aua8hc0w"})}">
+						<an-button style="--background: #F4426E; --foreground: var(--light);" @click="${() => showYoutubeVideo({youtubeId: "9M7Aua8hc0w"})}">
 							<span>Watch a product video</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
@@ -140,7 +140,7 @@ class App extends LitElement {
 				<!-- Lasercat -->
 				<an-project
 					class="project"
-					style="--theme-600: #8A7533; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #8A7225; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("lasercat")}"
 					logo="${projectLogo("lasercat")}"
 					date="2019 - Present"
@@ -148,7 +148,7 @@ class App extends LitElement {
 					text="Shoot laser at things you want to remove from the internet.">
 					<an-buttons slot="footer">
 						<a href="https://lasercat.app" target="_blank" rel="noopener">
-							<an-button style="--background: #8A7533; --foreground: var(--light);">
+							<an-button style="--background: #8A7225; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
@@ -159,7 +159,7 @@ class App extends LitElement {
 				<!-- Web skills -->
 				<an-project
 					class="project"
-					style="--theme-600: #028F5D; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #15873D; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("webskills")}"
 					logo="${projectLogo("webskills")}"
 					date="2020 - Present"
@@ -167,7 +167,7 @@ class App extends LitElement {
 					text="A visual overview of useful skills to learn as a web developer.">
 					<an-buttons slot="footer">
 						<a href="https://andreasbm.github.io/web-skills" target="_blank" rel="noopener">
-							<an-button style="--background: #028F5D; --foreground: var(--light);">
+							<an-button style="--background: #15873D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
