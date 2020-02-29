@@ -8,7 +8,8 @@
 		"deploy": "npm run b && git subtree push --prefix dist origin gh-pages",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack",
-		"clean:dist": "rimraf dist"
+		"clean:dist": "rimraf dist",
+		"delete:gh-pages": "git push origin --delete gh-pages"
 	},
 	"dependencies": {
 		"lit-element": "^2.2.1",
