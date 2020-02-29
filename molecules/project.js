@@ -36,7 +36,7 @@ class Project extends LitElement {
 					background: var(--background);
 					border-radius: var(--border-radius-m);
 					box-shadow: var(--shadow);
-					padding: var(--spacing-xxxxxl) var(--spacing-xxl) var(--spacing-xxxl);
+					padding: var(--spacing-xxxxxxl) var(--spacing-xxl);
 				}
 				
 				#cover {
@@ -62,10 +62,6 @@ class Project extends LitElement {
 					text-align: center;
 					max-width: 850px;
 					margin: 0 auto;
-				}
-				
-				#footer {
-				
 				}
 				
 				#logo {
@@ -96,7 +92,9 @@ class Project extends LitElement {
 				}
 				
 				::slotted([slot="footer"]) {
-				    margin-top: var(--spacing-xxxl);
+					position: absolute;
+					right: var(--spacing-xxxl);
+					bottom: var(--spacing-xxxl);
 					display: flex;
 					align-items: center;
 					justify-content: flex-end;

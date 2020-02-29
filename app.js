@@ -175,6 +175,25 @@ class App extends LitElement {
 					</an-buttons>
 				</an-project>
 				
+				<!-- Weightless -->
+				<an-project
+					class="project"
+					style="--theme-600: #354D8D; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					cover="${projectCover("weightless")}"
+					logo="${projectLogo("weightless")}"
+					date="2019 - Present"
+					name="Weightless"
+					text="High quality web components with a small footprint.">
+					<an-buttons slot="footer">
+						<a href="https://weightless.dev" target="_blank" rel="noopener">
+							<an-button style="--background: #354D8D; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
 				<!-- Perfect Playlist -->
 				<an-project
 					class="project"

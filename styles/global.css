@@ -71,6 +71,7 @@ html {
 	--spacing-xxxl: 40px;
 	--spacing-xxxxl: 60px;
 	--spacing-xxxxxl: 80px;
+	--spacing-xxxxxxl: 120px;
 
 	--border-radius-s: 8px;
 	--border-radius-m: 16px;
@@ -106,6 +107,7 @@ body {
 		--spacing-xxxl: 28px;
 		--spacing-xxxxl: 32px;
 		--spacing-xxxxxl: 36px;
+		--spacing-xxxxxxl: 40px;
 	}
 }
 

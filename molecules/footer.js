@@ -14,8 +14,8 @@ class Footer extends LitElement {
 				}
 				
 				#footer {
-					background: var(--foreground);
-					color: var(--background);
+					background: var(--space-500);
+					color: var(--space-500-contrast);
 					padding: var(--spacing-l) var(--spacing-xxl);
 				}
 			`
