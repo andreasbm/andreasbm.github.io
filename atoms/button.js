@@ -7,10 +7,11 @@ class Button extends LitElement {
 			sharedStyles,
 			css`
 				:host {
-					display: inline-flex;
+					display: flex;
 					cursor: pointer;
 					user-select: none;
 				    align-items: center;
+			        justify-content: center;
                     line-height: 1;
                     text-decoration: none;
 					font-weight: var(--font-weight-m);
@@ -27,7 +28,7 @@ class Button extends LitElement {
 				}
 				
 				:host(:hover) {
-					transform: scale(1.1);
+					transform: scale(1.06);
 				}
 				
 				::slotted(an-icon) {

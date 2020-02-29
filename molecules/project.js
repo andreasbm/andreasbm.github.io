@@ -4,12 +4,13 @@ import "./../atoms/text.js";
 import {sharedStyles} from "./../styles/shared.js";
 import {css, html, LitElement} from "./../web_modules/lit-element.js";
 
-const PROJECT_ASSETS_BASE_PATH = `/assets/projects`;
-
 class Project extends LitElement {
 	static get properties () {
 		return {
-			project: {
+			cover: {
+				type: String
+			},
+			logo: {
 				type: String
 			},
 			date: {
@@ -35,6 +36,7 @@ class Project extends LitElement {
 					background: var(--background);
 					border-radius: var(--border-radius-m);
 					box-shadow: var(--shadow);
+					padding: var(--spacing-xxxxxl) var(--spacing-xxl) var(--spacing-xxxl);
 				}
 				
 				#cover {
@@ -43,12 +45,23 @@ class Project extends LitElement {
 					left: 0;
 					width: 100%;
 					height: 100%;
+					/*filter: blur(var(--cover-blur, 8px));*/
+					
+					/* Scale to get rid of ugly blur edge */
+					/*transform: scale(1.1);*/ 
+					object-fit: cover;
 				}
 				
 				#content {
 					background: var(--background);
 					color: var(--foreground);
 					border-radius: var(--border-radius-m);
+					padding: var(--spacing-xxxl);
+					box-shadow: var(--shadow);
+					position: relative;
+					text-align: center;
+					max-width: 850px;
+					margin: 0 auto;
 				}
 				
 				#footer {
@@ -56,40 +69,50 @@ class Project extends LitElement {
 				}
 				
 				#logo {
-				
+					width: var(--logo-size, 60px);
+					height: var(--logo-size, 60px);
+					object-fit: contain;
+					margin: 0 0 var(--spacing-m);
 				}
 				
 				#name {
-				
+					font-size: var(--font-size-xl);
 				}
 				
 				#text {
-				
 				}
 				
 				#date {
+					position: absolute;
+					top: var(--spacing-m);
+					left: var(--spacing-m);
+					font-size: var(--font-size-s);
+					border-radius: var(--border-radius-s);
+					padding: 0 var(--spacing-s);
+					line-height: 2;
+					border: 1px solid var(--theme-600, #0D0E34);
+					color: var(--theme-600, #0D0E34);
+					background: var(--theme-600-contrast, white);
+				}
 				
+				::slotted([slot="footer"]) {
+				    margin-top: var(--spacing-xxxl);
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
 				}
 			`
 		];
 	}
 
-	get coverSrc () {
-		return this.project != null ? `${PROJECT_ASSETS_BASE_PATH}/${this.project}/cover.jpg` : null;
-	}
-
-	get logoSrc () {
-		return this.project != null ? `${PROJECT_ASSETS_BASE_PATH}/${this.project}/logo.svg` : null;
-	}
-
 	render () {
 		return html`
-			${this.coverSrc != null ? html`<img id="cover" src="${this.coverSrc}" alt="${this.name || ""} cover." role="presentation" />` : ""}
+			${this.cover != null ? html`<img id="cover" loading="lazy" src="${this.cover}" alt="${this.name || ""} cover." role="presentation" />` : ""}
 			${this.date != null ? html`<div id="date">${this.date}</div>` : ""}
 			<div id="content">
-				${this.logoSrc != null ? html`<img id="logo" src="${this.logoSrc}" alt="${this.name || ""} logo." />` : ""}
-				${this.name != null ? html`<at-text id="name" role="heading" aria-level="3">${this.name}</at-text>` : ""}
-				${this.text != null ? html`<at-text id="text">${this.name}</at-text>` : ""}
+				${this.logo != null ? html`<img id="logo" loading="lazy" src="${this.logo}" alt="${this.name || ""} logo." />` : ""}
+				${this.name != null ? html`<an-text id="name" role="heading" aria-level="3">${this.name}</an-text>` : ""}
+				${this.text != null ? html`<an-text id="text">${this.text}</an-text>` : ""}
 			</div>
 			<slot name="footer"></slot>
 		`;

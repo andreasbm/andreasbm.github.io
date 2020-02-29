@@ -13,5 +13,9 @@ export const sendIconTemplate = svg`
 `;
 
 export const arrowRightIconTemplate = svg`
-	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/arrow-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path id="icon" fill="#0D0E34" fill-rule="nonzero" d="M12.01 7H0v2h12.01v3L16 8l-3.99-4z"/></g></svg>
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><g id="icons/arrow-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path id="icon" fill="currentColor" fill-rule="nonzero" d="M12.01 7H0v2h12.01v3L16 8l-3.99-4z"/></g></svg>
+`;
+
+export const videoIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"<g id="icons/video" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M12.444 7V3.889c0-.489-.4-.889-.888-.889H.889C.4 3 0 3.4 0 3.889v8.889c0 .489.4.889.889.889h10.667c.488 0 .888-.4.888-.89v-3.11L16 13.222V3.444L12.444 7z" id="icon" fill="currentColor" fill-rule="nonzero"/></g></svg>
 `;

@@ -8,8 +8,8 @@
 		"postinstall": "npm run snowpack"
 	},
 	"dependencies": {
-		"web-dialog": "^0.0.8",
-		"lit-element": "^2.2.1"
+		"lit-element": "^2.2.1",
+		"web-dialog": "0.0.8"
 	},
 	"devDependencies": {
 		"snowpack": "^1.4.0"

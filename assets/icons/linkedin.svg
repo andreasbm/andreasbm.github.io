@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons/linkedin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13.65625,0 L2.34375,0 C1.05151369,0 0,1.05151369 0,2.34375 L0,13.65625 C0,14.9484863 1.05151369,16 2.34375,16 L13.65625,16 C14.9484863,16 16,14.9484863 16,13.65625 L16,2.34375 C16,1.05151369 14.9484863,0 13.65625,0 Z M6,13 L4,13 L4,6 L6,6 L6,13 Z M6,5 L4,5 L4,3 L6,3 L6,5 Z M13,13 L11,13 L11,9 C11,8.44869793 10.5513021,8 10,8 C9.44869793,8 9,8.44869793 9,9 L9,13 L7,13 L7,6 L9,6 L9,6.37695313 C9.52395833,6.2140625 9.86432293,6 10.5,6 C11.8563802,6.0014323 13,7.21822917 13,8.65625 L13,13 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

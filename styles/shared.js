@@ -9,4 +9,8 @@ export const sharedStyles = css`
 	a {
 		text-decoration: none;
 	}
+	
+	* {
+		box-sizing: border-box;
+	}
 `;

@@ -17,8 +17,8 @@ class Icon extends LitElement {
 			css`
 				:host {
 					display: flex;
-					width: 20px;
-					height: 20px;
+					width: var(--icon-size, 20px);
+					height: var(--icon-size, 20px);
 				}
 			`
 		];
