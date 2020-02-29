@@ -78,7 +78,6 @@ ehthumbs.db
 *.crt
 *.csr
 /node_modules/
-/dist/
 /documentation/
 .firebase/
 .chrome/
