@@ -109,6 +109,10 @@ class App extends LitElement {
 					name="Ideanote"
 					text="Ideanote is the cloud-based innovation platform that empowers your teams to capture, develop and prioritize more of the right ideas.">
 					<an-buttons slot="footer">
+						<an-button style="--background: #F34271; --foreground: var(--light);" @click="${() => showYoutubeVideo({youtubeId: "9M7Aua8hc0w"})}">
+							<span>Watch a product video</span>
+							<an-icon .template="${videoIconTemplate}"></an-icon>
+						</an-button>
 						<a href="https://ideanote.io" target="_blank" rel="noopener">
 							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
@@ -186,7 +190,7 @@ class App extends LitElement {
 					text="Play chess with your vocabulary in Wordbase, the tactical word game that requires the strategic prowess of chess or checkers, along with a mind like a dictionary, to master.">
 					<an-buttons slot="footer">
 						<an-button style="--background: #00C9EA; --foreground: var(--light);" @click="${() => showYoutubeVideo({youtubeId: "7zxtR0segS8"})}">
-							<span>Watch epic battle</span>
+							<span>Watch an epic battle</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
 						<a href="https://wordbaseapp.com" target="_blank" rel="noopener">
