@@ -105,6 +105,11 @@ class Project extends LitElement {
 					    left: 50%;
                         transform: translateX(-50%);
 					}
+					
+					::slotted([slot="footer"]) {
+					    position: static;
+                        margin: var(--spacing-xl);
+					}
 				}
 			`
 		];
