@@ -289,9 +289,12 @@ class App extends LitElement {
 					</an-buttons>
 				</an-project>
 				
+			</an-container>
+			<an-container>
+			
 				<!-- Skills -->
+				<an-text role="heading" aria-level="2" center margin="large">What I do</an-text>
 				<an-card class="card" id="skills-card">
-					<an-section-header center headline="What I do" text="For the past decade I have been perfecting coding and designing."></an-section-header>
 					<an-skills></an-skills>
 				</an-card>
 				
@@ -299,16 +302,16 @@ class App extends LitElement {
 				<an-card class="card" id="music-card">
 					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
 					<div class="media-grid">
-						<a href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
+						<a aria-label="Prep link" href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
 							<an-media src="${musicCover("prep")}"></an-media>
 						</a>
-						<a href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" target="_blank" rel="noopener">
+						<a aria-label="Deluxe link" href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" target="_blank" rel="noopener">
 							<an-media src="${musicCover("deluxe")}"></an-media>
 						</a>
-						<a href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" target="_blank" rel="noopener">
+						<a aria-label="Bastille link" href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" target="_blank" rel="noopener">
 							<an-media src="${musicCover("bastille")}"></an-media>
 						</a>
-						<a href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" target="_blank" rel="noopener">
+						<a aria-label="Two Door Cinema Club link" href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" target="_blank" rel="noopener">
 							<an-media src="${musicCover("two-door-cinema-club")}"></an-media>
 						</a>
 					</div>
@@ -319,6 +322,7 @@ class App extends LitElement {
 					<an-section-header center headline="Say hi" text="If you want to learn more about what I'm doing, find me on my favorite platforms."></an-section-header>
 					<an-social-buttons></an-social-buttons>
 				</an-card>
+			
 			</an-container>
 			
 			<!-- Footer -->

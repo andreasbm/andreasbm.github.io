@@ -60,9 +60,9 @@ export class Media extends Card {
 
 	render () {
 		return html`
-			${this.src != null ? html`<img id="img" src="${this.src}" />` : ""}
+			${this.src != null ? html`<img id="img" src="${this.src}" role="presentation" />` : ""}
 			<div id="overlay"></div>
-			<an-icon id="icon" .template="${playIconTemplate}"></an-icon>
+			<an-icon id="icon" .template="${playIconTemplate}" aria-label="Play icon"></an-icon>
 		`;
 	}
 }
