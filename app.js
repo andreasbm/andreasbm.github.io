@@ -92,6 +92,25 @@ class App extends LitElement {
 			"page_path": location.pathname,
 			"page_location": location.href
 		});
+
+		// Listen for CTA events
+		window.addEventListener("click", e => {
+
+			// Find the target by using the composed path to get the element through the shadow boundaries.
+			const $anchor = ("composedPath" in e) ? e.composedPath().find($elem => $elem instanceof HTMLAnchorElement) : e.target;
+
+			// Make sure the click is an anchor
+			if (!($anchor instanceof HTMLAnchorElement)) {
+				return;
+			}
+
+			// Track event
+			gtag("event", "click_link", {
+				"event_category": "cta",
+				"event_label": `${$anchor.ariaLabel || $anchor.href}`,
+				transport: 'beacon'
+			});
+		});
 	}
 
 	/**
@@ -300,7 +319,7 @@ class App extends LitElement {
 				
 				<!-- Music -->
 				<an-card class="card" id="music-card">
-					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
+					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
 					<div class="media-grid">
 						<a aria-label="Prep link" href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
 							<an-media src="${musicCover("prep")}"></an-media>

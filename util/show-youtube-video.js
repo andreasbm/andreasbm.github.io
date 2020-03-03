@@ -1,6 +1,12 @@
 import {render, html} from "./../web_modules/lit-html.js";
 
 export async function showYoutubeVideo ({youtubeId}) {
+
+	gtag("event", "watch_video", {
+		"event_category": "cta",
+		"event_label": `Watch Youtube video with ID '${youtubeId}'`,
+	});
+
 	import("./../web_modules/web-dialog.js").then(({openDialog}) => {
 		openDialog({
 			center: true,
