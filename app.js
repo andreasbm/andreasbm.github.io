@@ -2,6 +2,9 @@ import "./atoms/buttons.js";
 import "./atoms/container.js";
 import "./atoms/icon.js";
 import "./atoms/text.js";
+import "./atoms/card.js";
+import "./atoms/media.js";
+import "./atoms/section-header.js";
 import {
 	arrowDownIconTemplate,
 	arrowRightIconTemplate,
@@ -11,13 +14,15 @@ import {
 } from "./icons.js";
 import "./molecules/header.js";
 import "./molecules/project.js";
-import "./molecules/social.js";
+import "./molecules/social-buttons.js";
 import "./molecules/footer.js";
+import "./molecules/skills.js";
 import {sharedStyles} from "./styles/shared.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
 
-const PROJECT_ASSETS_BASE_PATH = `/assets/projects`;
+const ASSETS_BASE_PATH = `/assets`;
+const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
 const GA_MEASUREMENT_ID = "UA-96179028-10";
 
 function projectPath (id, extra) {
@@ -32,6 +37,10 @@ function projectLogo (id) {
 	return projectPath(id, "logo.svg");
 }
 
+function musicCover (id) {
+	return `${ASSETS_BASE_PATH}/music/${id}.jpg`;
+}
+
 class App extends LitElement {
 	static get styles () {
 		return [
@@ -41,13 +50,34 @@ class App extends LitElement {
 					padding-top: var(--spacing-xxxxxl);
 				}
 				
-				.project:not(:last-child) {
+				.card:not(:last-child) {
 					margin: 0 0 var(--spacing-xxl);
+				}
+				
+				.media-grid {
+					--media-size: 200px;
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(var(--media-size), 1fr));
+					grid-gap: var(--spacing-m);
+				}
+				
+				#skills-card {
+				    background: var(--yellow-500);
+				    color: var(--yellow-500-contrast);
+				}
+				
+				#music-card {
+				    background: var(--space-500);
+                    color: var(--space-500-contrast);
 				}
 				
 				@media (max-width: 770px) {
 					#contact-button, #projects-button {
 						display: none;
+					}
+					
+					.media-grid {
+						--media-size: 100%;
 					}
 				}
 			`
@@ -116,7 +146,7 @@ class App extends LitElement {
 				
 				<!-- Ideanote -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #000000; --theme-600-contrast: var(--light);"
 					cover="${projectCover("ideanote")}"
 					logo="${projectLogo("ideanote")}"
@@ -139,7 +169,7 @@ class App extends LitElement {
 				
 				<!-- Lasercat -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #8A7225; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("lasercat")}"
 					logo="${projectLogo("lasercat")}"
@@ -158,7 +188,7 @@ class App extends LitElement {
 				
 				<!-- Web skills -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #15873D; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("webskills")}"
 					logo="${projectLogo("webskills")}"
@@ -177,7 +207,7 @@ class App extends LitElement {
 				
 				<!-- Weightless -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #354D8D; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("weightless")}"
 					logo="${projectLogo("weightless")}"
@@ -196,7 +226,7 @@ class App extends LitElement {
 				
 				<!-- Perfect Playlist -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #1DB954; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("perfectplaylist")}"
 					logo="${projectLogo("perfectplaylist")}"
@@ -215,7 +245,7 @@ class App extends LitElement {
 				
 				<!-- Wordbase -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #A75C08; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("wordbase")}"
 					logo="${projectLogo("wordbase")}"
@@ -238,7 +268,7 @@ class App extends LitElement {
 				
 				<!-- Ruandpiano -->
 				<an-project
-					class="project"
+					class="card"
 					style="--theme-600: #151515; --theme-600-contrast: var(--light); --logo-size: 80px;"
 					cover="${projectCover("ruandpiano")}"
 					logo="${projectLogo("ruandpiano")}"
@@ -258,11 +288,37 @@ class App extends LitElement {
 						</a>
 					</an-buttons>
 				</an-project>
-			</an-container>
-			
-			<!-- Social -->
-			<an-container>
-				<an-social headline="Say hi" text="If you want to learn more about what I'm doing, find me on my favorite platforms."></an-social>
+				
+				<!-- Skills -->
+				<an-card class="card" id="skills-card">
+					<an-section-header center headline="What I do" text="For the past decade I have been perfecting coding and designing."></an-section-header>
+					<an-skills></an-skills>
+				</an-card>
+				
+				<!-- Music -->
+				<an-card class="card" id="music-card">
+					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
+					<div class="media-grid">
+						<a href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
+							<an-media src="${musicCover("prep")}"></an-media>
+						</a>
+						<a href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" target="_blank" rel="noopener">
+							<an-media src="${musicCover("deluxe")}"></an-media>
+						</a>
+						<a href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" target="_blank" rel="noopener">
+							<an-media src="${musicCover("bastille")}"></an-media>
+						</a>
+						<a href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" target="_blank" rel="noopener">
+							<an-media src="${musicCover("two-door-cinema-club")}"></an-media>
+						</a>
+					</div>
+				</an-card>
+				
+				<!-- Social -->
+				<an-card class="card">
+					<an-section-header center headline="Say hi" text="If you want to learn more about what I'm doing, find me on my favorite platforms."></an-section-header>
+					<an-social-buttons></an-social-buttons>
+				</an-card>
 			</an-container>
 			
 			<!-- Footer -->

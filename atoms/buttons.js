@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "./../web_modules/lit-element.js";
 import {sharedStyles} from "./../styles/shared.js";
 
-class Buttons extends LitElement {
+export class Buttons extends LitElement {
 	static get styles () {
 		return [
 			sharedStyles,
@@ -11,7 +11,7 @@ class Buttons extends LitElement {
 					align-items: center;
 				}
 				
-				::slotted(:not(:last-child)) {
+				::slotted(:not(:last-child)), :host > :not(:last-child) {
 					margin: 0 var(--spacing-xxl) 0 0;
 				}
 				
@@ -22,15 +22,15 @@ class Buttons extends LitElement {
 						justify-content: stretch;
 					}
 					
-					::slotted(*) {
+					::slotted(*), :host > * {
 						width: 100%;
 					}
 					
-					::slotted(:not(:last-child)) {
+					::slotted(:not(:last-child)), :host > :not(:last-child) {
 						margin: 0 0 var(--spacing-l);
 					}
 					
-					::slotted(:first-child:last-child) (
+					::slotted(:first-child:last-child), :host > :first-child:last-child (
 						margin: 0;
 					}
 				}

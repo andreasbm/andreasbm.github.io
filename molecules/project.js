@@ -1,10 +1,10 @@
+import {Card} from "../atoms/card.js";
 import "./../atoms/button.js";
 import "./../atoms/icon.js";
 import "./../atoms/text.js";
-import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {css, html} from "./../web_modules/lit-element.js";
 
-class Project extends LitElement {
+class Project extends Card {
 	static get properties () {
 		return {
 			cover: {
@@ -27,15 +27,10 @@ class Project extends LitElement {
 
 	static get styles () {
 		return [
-			sharedStyles,
+			super.styles,
 			css`
 				:host {
-					display: block;
-					position: relative;
-					overflow: hidden;
-					background: var(--background);
-					border-radius: var(--border-radius-m);
-					box-shadow: var(--shadow);
+					background: var(--theme-600);
 					padding: var(--spacing-xxxxxxl) var(--spacing-xxl);
 				}
 				
@@ -108,7 +103,7 @@ class Project extends LitElement {
 					
 					::slotted([slot="footer"]) {
 					    position: static;
-                        margin: var(--spacing-xl);
+                        margin: var(--spacing-xl) 0 0 0;
 					}
 				}
 			`
