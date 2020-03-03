@@ -21,6 +21,7 @@ import {sharedStyles} from "./styles/shared.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
 
+
 const ASSETS_BASE_PATH = `/assets`;
 const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
 const GA_MEASUREMENT_ID = "UA-96179028-10";
@@ -37,8 +38,8 @@ function projectLogo (id) {
 	return projectPath(id, "logo.svg");
 }
 
-function musicCover (id) {
-	return `${ASSETS_BASE_PATH}/music/${id}.jpg`;
+function mediaCover (id) {
+	return `${ASSETS_BASE_PATH}/media/${id}.jpg`;
 }
 
 class App extends LitElement {
@@ -111,6 +112,11 @@ class App extends LitElement {
 				transport: 'beacon'
 			});
 		});
+
+		// Spawn laser cat after a delay
+		setTimeout(() => {
+			this.spawnLaserCat();
+		}, 1000);
 	}
 
 	/**
@@ -128,6 +134,18 @@ class App extends LitElement {
 		if ($elem != null) {
 			$elem.scrollIntoView({behavior: "smooth", block: "start"});
 		}
+	}
+
+	spawnLaserCat () {
+		import("./laser-cat/laser-cat.js").then(() => {
+			const $laserCat = document.createElement("laser-cat");
+			$laserCat.setAttribute("sounds", JSON.stringify({
+				meow: ["./assets/audio/meow.mp3"],
+				laser: ["./assets/audio/laser.mp3"],
+				rainbow: ["./assets/audio/rainbow.mp3"]
+			}));
+			document.body.appendChild($laserCat);
+		});
 	}
 
 	render () {
@@ -322,16 +340,16 @@ class App extends LitElement {
 					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
 					<div class="media-grid">
 						<a aria-label="Prep link" href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
-							<an-media src="${musicCover("prep")}"></an-media>
+							<an-media src="${mediaCover("prep")}"></an-media>
 						</a>
 						<a aria-label="Deluxe link" href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" target="_blank" rel="noopener">
-							<an-media src="${musicCover("deluxe")}"></an-media>
+							<an-media src="${mediaCover("deluxe")}"></an-media>
 						</a>
 						<a aria-label="Bastille link" href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" target="_blank" rel="noopener">
-							<an-media src="${musicCover("bastille")}"></an-media>
+							<an-media src="${mediaCover("bastille")}"></an-media>
 						</a>
 						<a aria-label="Two Door Cinema Club link" href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" target="_blank" rel="noopener">
-							<an-media src="${musicCover("two-door-cinema-club")}"></an-media>
+							<an-media src="${mediaCover("two-door-cinema-club")}"></an-media>
 						</a>
 					</div>
 				</an-card>
