@@ -415,7 +415,7 @@ export default class LaserCat extends Character {
 			if ($rainbow.isConnected) {
 				$rainbow.remove();
 			}
-		})
+		});
 
 		// Append the rainbow and show it
 		document.body.appendChild($rainbow);

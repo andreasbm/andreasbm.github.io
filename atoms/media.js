@@ -7,6 +7,9 @@ export class Media extends Card {
 		return {
 			src: {
 				type: String
+			},
+			iconTemplate: {
+				type: Object
 			}
 		}
 	}
@@ -16,8 +19,8 @@ export class Media extends Card {
 			super.styles,
 			css`
 				:host {
-					width: var(--media-size, 200px);
-					height: var(--media-size, 200px);
+					width: var(--media-width, 200px);
+					height: var(--media-height, 200px);
 					color: var(--light);
 					cursor: pointer;
 				}
@@ -62,7 +65,7 @@ export class Media extends Card {
 		return html`
 			${this.src != null ? html`<img id="img" src="${this.src}" role="presentation" loading="lazy" />` : ""}
 			<div id="overlay"></div>
-			<an-icon id="icon" .template="${playIconTemplate}" aria-label="Play icon"></an-icon>
+			<an-icon id="icon" .template="${this.iconTemplate || playIconTemplate}" aria-label="Play icon"></an-icon>
 		`;
 	}
 }

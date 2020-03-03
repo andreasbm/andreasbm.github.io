@@ -1,22 +1,23 @@
 import "./atoms/buttons.js";
+import "./atoms/card.js";
 import "./atoms/container.js";
 import "./atoms/icon.js";
-import "./atoms/text.js";
-import "./atoms/card.js";
 import "./atoms/media.js";
 import "./atoms/section-header.js";
+import "./atoms/text.js";
 import {
 	arrowDownIconTemplate,
 	arrowRightIconTemplate,
 	githubIconTemplate,
+	openIconTemplate,
 	sendIconTemplate,
 	videoIconTemplate
 } from "./icons.js";
+import "./molecules/footer.js";
 import "./molecules/header.js";
 import "./molecules/project.js";
-import "./molecules/social-buttons.js";
-import "./molecules/footer.js";
 import "./molecules/skills.js";
+import "./molecules/social-buttons.js";
 import {sharedStyles} from "./styles/shared.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
@@ -56,36 +57,40 @@ class App extends LitElement {
 				}
 				
 				.media-grid {
-					--media-size: 200px;
+					--media-width: 200px;
 					display: grid;
-					grid-template-columns: repeat(auto-fill, minmax(var(--media-size), 1fr));
-					grid-gap: var(--spacing-m);
+					grid-template-columns: repeat(4, var(--media-width));
+					grid-gap: var(--spacing-xl);
+                    justify-content: center;
 				}
 				
 				#skills-card {
-				    background: var(--yellow-500);
-				    color: var(--yellow-500-contrast);
-				}
-				
-				#music-card {
 				    background: var(--space-500);
                     color: var(--space-500-contrast);
 				}
 				
-				@media (max-width: 770px) {
+				#music-card {
+				}
+				
+				#books-card .media-grid {
+					--media-height: 266px;
+				}
+				
+				@media (max-width: 1000px) {
 					#contact-button, #projects-button {
 						display: none;
 					}
 					
 					.media-grid {
 						--media-size: 100%;
+						grid-template-columns: repeat(auto-fill, minmax(var(--media-width), 1fr));
 					}
 				}
 			`
 		];
 	}
 
-	constructor  () {
+	constructor () {
 		super();
 
 		// Track page view (we only have this one page)
@@ -157,13 +162,13 @@ class App extends LitElement {
 						<span>See my projects</span>
 						<an-icon .template="${arrowDownIconTemplate}"></an-icon>
 					</an-button>
-					<a id="github-button" href="https://github.com/andreasbm" target="_blank" rel="noopener">
+					<a id="github-button" href="https://github.com/andreasbm" rel="noopener">
 						<an-button>
 							<an-icon .template="${githubIconTemplate}"></an-icon>
 							<span>Go to my Github</span>
 						</an-button>
 					</a>
-					<a href="mailto:andmehlsen@gmail.com" target="_blank" rel="noopener" aria-label="Open email">
+					<a href="mailto:andmehlsen@gmail.com" rel="noopener" aria-label="Open email">
 						<an-button id="contact-button" style="--background: var(--yellow-500); --foreground: var(--yellow-500-contrast)"  @click="${() => this.scrollTo("contact")}">
 							<span>Contact me</span>
 							<an-icon .template="${sendIconTemplate}"></an-icon>
@@ -195,7 +200,7 @@ class App extends LitElement {
 							<span>Watch a product video</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://ideanote.io" target="_blank" rel="noopener">
+						<a href="https://ideanote.io" rel="noopener">
 							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -214,7 +219,7 @@ class App extends LitElement {
 					name="Laser Cat"
 					text="Shoot laser at things you want to remove from the internet.">
 					<an-buttons slot="footer">
-						<a href="https://lasercat.app" target="_blank" rel="noopener">
+						<a href="https://lasercat.app" rel="noopener">
 							<an-button style="--background: #8A7225; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -233,7 +238,7 @@ class App extends LitElement {
 					name="Web Skills"
 					text="A visual overview of useful skills to learn as a web developer.">
 					<an-buttons slot="footer">
-						<a href="https://andreasbm.github.io/web-skills" target="_blank" rel="noopener">
+						<a href="https://andreasbm.github.io/web-skills" rel="noopener">
 							<an-button style="--background: #15873D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -252,7 +257,7 @@ class App extends LitElement {
 					name="Weightless"
 					text="High quality web components with a small footprint.">
 					<an-buttons slot="footer">
-						<a href="https://weightless.dev" target="_blank" rel="noopener">
+						<a href="https://weightless.dev" rel="noopener">
 							<an-button style="--background: #354D8D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -271,7 +276,7 @@ class App extends LitElement {
 					name="Perfect Playlist"
 					text="Create the perfect playlist based on you and your friends favorite music.">
 					<an-buttons slot="footer">
-						<a href="https://perfectplaylist.app" target="_blank" rel="noopener">
+						<a href="https://perfectplaylist.app" rel="noopener">
 							<an-button style="--background: #1DB954; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -294,7 +299,7 @@ class App extends LitElement {
 							<span>Watch an epic battle</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://wordbaseapp.com" target="_blank" rel="noopener">
+						<a href="https://wordbaseapp.com" rel="noopener">
 							<an-button style="--background: #FF8800; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -317,7 +322,7 @@ class App extends LitElement {
 							<span>Watch my favorite recording</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://www.youtube.com/user/ruandpiano" target="_blank" rel="noopener">
+						<a href="https://www.youtube.com/user/ruandpiano" rel="noopener">
 							<an-button style="--background: #151515; --foreground: var(--light);">
 								<span>Go to Youtube</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -337,19 +342,57 @@ class App extends LitElement {
 				
 				<!-- Music -->
 				<an-card class="card" id="music-card">
-					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to some of my favorite tunes. I hope you like them as much as I do! "></an-section-header>
+					<an-section-header center headline="My favorite music" text="I listen to music every day - try to listen to some of my favorite tunes. I hope you like them as much as I do!"></an-section-header>
 					<div class="media-grid">
-						<a aria-label="Prep link" href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" target="_blank" rel="noopener">
+						<a aria-label="Prep link" href="https://open.spotify.com/playlist/2CTXQsLLL6UiquApb3rf5F?si=gqYvx2McR1OiFvA4Wp4N-w" rel="noopener">
 							<an-media src="${mediaCover("prep")}"></an-media>
 						</a>
-						<a aria-label="Deluxe link" href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" target="_blank" rel="noopener">
+						<a aria-label="Deluxe link" href="https://open.spotify.com/playlist/3lrUwE6yLty0NxTR5RDH9b?si=gXX5nWtqQfCGig99zpZv1A" rel="noopener">
 							<an-media src="${mediaCover("deluxe")}"></an-media>
 						</a>
-						<a aria-label="Bastille link" href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" target="_blank" rel="noopener">
+						<a aria-label="Bastille link" href="https://open.spotify.com/playlist/4SW2xyUZlNev7RQdq800Ty?si=uuGqMZKcTcqNLxzScWgTbg" rel="noopener">
 							<an-media src="${mediaCover("bastille")}"></an-media>
 						</a>
-						<a aria-label="Two Door Cinema Club link" href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" target="_blank" rel="noopener">
+						<a aria-label="Two Door Cinema Club link" href="https://open.spotify.com/playlist/6Ig3Hmv4EZmWQcwIsH6bP3?si=ErlfCQj_TF2we5HDEPZyfQ" rel="noopener">
 							<an-media src="${mediaCover("two-door-cinema-club")}"></an-media>
+						</a>
+					</div>
+				</an-card>
+				
+				<!-- Books -->
+				<an-card class="card" id="books-card">
+					<an-section-header center headline="My favorite books" text="Reading books is a great way to relax. If you have time, check out my favorites."></an-section-header>
+					<div class="media-grid">
+						<a aria-label="Refactoring UI link" href="https://refactoringui.com/" rel="noopener">
+							<an-media src="${mediaCover("refactoring-ui")}" .iconTemplate="${openIconTemplate}"></an-media>
+						</a>
+						<a aria-label="Badass link" href="https://www.amazon.com/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019" rel="noopener">
+							<an-media src="${mediaCover("badass")}" .iconTemplate="${openIconTemplate}"></an-media>
+						</a>
+						<a aria-label="The Ego Tunnel link" href="https://www.amazon.com/Ego-Tunnel-Science-Mind-Myth/dp/0465020690" rel="noopener">
+							<an-media src="${mediaCover("the-ego-tunnel")}" .iconTemplate="${openIconTemplate}"></an-media>
+						</a>
+						<a aria-label="Two Door Cinema Club link" href="https://samharris.org/books/waking-up" rel="noopener">
+							<an-media src="${mediaCover("waking-up")}" .iconTemplate="${openIconTemplate}"></an-media>
+						</a>
+					</div>
+				</an-card>
+				
+				<!-- Podcasts -->
+				<an-card class="card" id="podcast-card">
+					<an-section-header center headline="My favorite podcasts" text="Every day when I bike through Copenhagen I enjoy podcasts. Here are some of my favorites!"></an-section-header>
+					<div class="media-grid">
+						<a aria-label="Making Sense link" href="https://open.spotify.com/show/5rgumWEx4FsqIY8e1wJNAk?si=w2cyVtAiTHmaH8mI-O1lSg" rel="noopener">
+							<an-media src="${mediaCover("making-sense")}"></an-media>
+						</a>
+						<a aria-label="Reply All link" href="https://open.spotify.com/show/7gozmLqbcbr6PScMjc0Zl4?si=BEO9nQ8aQCaHzzxNlNqNQQ" rel="noopener">
+							<an-media src="${mediaCover("reply-all")}"></an-media>
+						</a>
+						<a aria-label="Invisible link" href="https://open.spotify.com/show/2VRS1IJCTn2Nlkg33ZVfkM?si=GwXze2vySPqdmt5AaBBNJg" rel="noopener">
+							<an-media src="${mediaCover("invisible")}"></an-media>
+						</a>
+						<a aria-label="Syntax link" href="https://open.spotify.com/show/4kYCRYJ3yK5DQbP5tbfZby?si=bWrUaPmBR1Kio2VIXF3prA" rel="noopener">
+							<an-media src="${mediaCover("syntax")}"></an-media>
 						</a>
 					</div>
 				</an-card>
