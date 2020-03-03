@@ -361,7 +361,7 @@ class App extends LitElement {
 				
 				<!-- Books -->
 				<an-card class="card" id="books-card">
-					<an-section-header center headline="My favorite books" text="Reading books is a great way to relax. If you have time, check out my favorites."></an-section-header>
+					<an-section-header center headline="My favorite books" text="I find reading books to be a great way to relax. If you have time, check out some of my favorites."></an-section-header>
 					<div class="media-grid">
 						<a aria-label="Refactoring UI link" href="https://refactoringui.com/" rel="noopener">
 							<an-media src="${mediaCover("refactoring-ui")}" .iconTemplate="${openIconTemplate}"></an-media>
@@ -380,7 +380,7 @@ class App extends LitElement {
 				
 				<!-- Podcasts -->
 				<an-card class="card" id="podcast-card">
-					<an-section-header center headline="My favorite podcasts" text="Every day when I bike through Copenhagen I enjoy podcasts. Here are some of my favorites!"></an-section-header>
+					<an-section-header center headline="My favorite podcasts" text="Every day when I bike through Copenhagen I enjoy listening to podcasts. Here are some of my favorites!"></an-section-header>
 					<div class="media-grid">
 						<a aria-label="Making Sense link" href="https://open.spotify.com/show/5rgumWEx4FsqIY8e1wJNAk?si=w2cyVtAiTHmaH8mI-O1lSg" rel="noopener">
 							<an-media src="${mediaCover("making-sense")}"></an-media>
