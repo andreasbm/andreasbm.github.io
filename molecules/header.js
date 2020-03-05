@@ -119,13 +119,21 @@ class Header extends LitElement {
 		];
 	}
 
+	ready () {
+		this.classList.add("ready");
+	}
+
 	onAvatarLoaded (e) {
-		e.target.animate({
-			transform: [`scale(0)`, `scale(1)`],
-			opacity: [`0`, `1`]
-		}, {duration: 200, easing: "ease-out"}).onfinish = () => {
-			this.classList.add("ready");
-		};
+		const $element = e.target;
+		if ("animate" in $element) {
+			e.target.animate({
+				transform: [`scale(0)`, `scale(1)`],
+				opacity: [`0`, `1`]
+			}, {duration: 200, easing: "ease-out"}).onfinish = this.ready.bind(this);
+
+		} else {
+			this.ready();
+		}
 	}
 
 	render () {
