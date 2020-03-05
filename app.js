@@ -157,7 +157,7 @@ class App extends LitElement {
 	render () {
 		return html`
 			<!-- Header -->
-			<an-header id="header" img="assets/andreas.png" text="Hi, I'm Andreas. I love building awesome things for the web.">
+			<an-header id="header" img="assets/andreas.png" text="Hi, I'm Andreas. I love building awesome things for the Web.">
 				<an-buttons slot="footer">
 					<an-button id="projects-button" style="--background: #6D73DB; --foreground: var(--light);" @click="${() => this.scrollTo("projects")}">
 						<span>See my projects</span>
