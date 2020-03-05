@@ -137,7 +137,7 @@ class Header extends LitElement {
 					</svg>
 					<div id="content">
 						${this.img != null ? html`<img @load="${this.onAvatarLoaded}" id="avatar" src="assets/andreas.png" alt="Avatar" loading="lazy"/>` : ""}
-						${this.text != null ? html`<an-text id="title" role="heading" aria-level="1">Hi, I'm Andreas. I love building awesome things for the web.</an-text>` : ""}
+						${this.text != null ? html`<an-text id="title" role="heading" aria-level="1">Hi, I'm Andreas. I love building awesome things for the Web.</an-text>` : ""}
 					</div>
 				</header>
 				<slot name="footer"></slot>

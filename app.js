@@ -144,6 +144,7 @@ class App extends LitElement {
 	spawnLaserCat () {
 		import("./laser-cat/laser-cat.js").then(() => {
 			const $laserCat = document.createElement("laser-cat");
+			$laserCat.setAttribute("aria-hidden", "true");
 			$laserCat.setAttribute("sounds", JSON.stringify({
 				meow: ["./assets/audio/meow.mp3"],
 				laser: ["./assets/audio/laser.mp3"],
@@ -179,7 +180,7 @@ class App extends LitElement {
 			
 			<!-- Info -->
 			<an-container id="info-container" size="small">
-				<an-text center>I'm a web developer from Denmark. I love building new exciting things for the web. When I'm not busy working on various projects, you'll find me playing piano or watching cat videos. </an-text>
+				<an-text center>I'm a web developer from Denmark. I love building new exciting things for the Web. When I'm not busy working on various projects, you'll find me playing piano or watching cat videos. </an-text>
 			</an-container>
 			
 			<!-- Projects -->
