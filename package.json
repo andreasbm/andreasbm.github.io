@@ -5,11 +5,9 @@
 		"serve": "http-server --push-state -o -c-1 -p 1200 -a localhost",
 		"s": "npm run serve",
 		"b": "npm run clean:dist && NODE_ENV=production parcel build index.html --experimental-scope-hoisting",
-		"deploy": "npm run b && git subtree push --prefix dist origin gh-pages",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack",
 		"clean:dist": "rimraf dist",
-		"delete:gh-pages": "git push origin --delete gh-pages"
 	},
 	"dependencies": {
 		"lit-element": "^2.2.1",
