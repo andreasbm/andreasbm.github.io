@@ -121,7 +121,7 @@ class App extends LitElement {
 		// Spawn laser cat after a delay
 		setTimeout(() => {
 			this.spawnLaserCat();
-		}, 1000);
+		}, 2000);
 	}
 
 	/**
@@ -144,7 +144,6 @@ class App extends LitElement {
 	spawnLaserCat () {
 		import("./laser-cat/laser-cat.js").then(() => {
 			const $laserCat = document.createElement("laser-cat");
-			$laserCat.setAttribute("aria-hidden", "true");
 			$laserCat.setAttribute("sounds", JSON.stringify({
 				meow: ["./assets/audio/meow.mp3"],
 				laser: ["./assets/audio/laser.mp3"],
