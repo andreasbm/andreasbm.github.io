@@ -82,7 +82,7 @@ class App extends LitElement {
 					}
 					
 					.media-grid {
-						--media-size: 100%;
+						--media-width: 100%;
 						grid-template-columns: repeat(auto-fill, minmax(var(--media-width), 1fr));
 					}
 				}

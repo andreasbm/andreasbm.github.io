@@ -36,7 +36,7 @@ class Skills extends LitElement {
 					}
 					
 					.code {
-						margin: 0 0 var(--spacing-xxl);
+						margin: 0 0 var(--spacing-xxxl);
 					}
 				}
 					
