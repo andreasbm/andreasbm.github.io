@@ -19,6 +19,7 @@ import "./molecules/project.js";
 import "./molecules/skills.js";
 import "./molecules/social-buttons.js";
 import {sharedStyles} from "./styles/shared.js";
+import {showRecapRedditVideo} from "./util/show-recap-reddit-video.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
 
@@ -295,6 +296,10 @@ class App extends LitElement {
 					name="Recap Reddit"
 					text="Automatically turn Reddit posts into recap videos.">
 					<an-buttons slot="footer">
+						<an-button style="--background: #1A1A1C; --foreground: var(--light);" @click="${() => showRecapRedditVideo({post: "https://www.reddit.com/r/AskReddit/comments/a72nr4/whats_something_small_you_can_start_doing_today"})}">
+							<span>Watch a Recap video</span>
+							<an-icon .template="${videoIconTemplate}"></an-icon>
+						</an-button>
 						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener">
 							<an-button style="--background: #FF4300; --foreground: var(--light);">
 								<span>Go to website</span>
