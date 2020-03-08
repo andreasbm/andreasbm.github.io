@@ -189,7 +189,7 @@ class App extends LitElement {
 				<!-- Ideanote -->
 				<an-project
 					class="card"
-					style="--theme-600: #000000; --theme-600-contrast: var(--light);"
+					style="--theme-600: #000000; --theme-600-contrast: var(--light); --logo-size: 60px;"
 					cover="${projectCover("ideanote")}"
 					logo="${projectLogo("ideanote")}"
 					date="2015 - Present"
@@ -212,7 +212,7 @@ class App extends LitElement {
 				<!-- Lasercat -->
 				<an-project
 					class="card"
-					style="--theme-600: #8A7225; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #8A7225; --theme-600-contrast: var(--light);"
 					cover="${projectCover("lasercat")}"
 					logo="${projectLogo("lasercat")}"
 					date="2019 - Present"
@@ -231,7 +231,7 @@ class App extends LitElement {
 				<!-- Web skills -->
 				<an-project
 					class="card"
-					style="--theme-600: #15873D; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #15873D; --theme-600-contrast: var(--light);"
 					cover="${projectCover("webskills")}"
 					logo="${projectLogo("webskills")}"
 					date="2020 - Present"
@@ -250,7 +250,7 @@ class App extends LitElement {
 				<!-- Weightless -->
 				<an-project
 					class="card"
-					style="--theme-600: #354D8D; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #354D8D; --theme-600-contrast: var(--light);"
 					cover="${projectCover("weightless")}"
 					logo="${projectLogo("weightless")}"
 					date="2019 - Present"
@@ -269,7 +269,7 @@ class App extends LitElement {
 				<!-- Perfect Playlist -->
 				<an-project
 					class="card"
-					style="--theme-600: #1DB954; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #1DB954; --theme-600-contrast: var(--light);"
 					cover="${projectCover("perfectplaylist")}"
 					logo="${projectLogo("perfectplaylist")}"
 					date="2019"
@@ -285,10 +285,29 @@ class App extends LitElement {
 					</an-buttons>
 				</an-project>
 				
+				<!-- Recap Reddit -->
+				<an-project
+					class="card"
+					style="--theme-600: #BF3707; --theme-600-contrast: var(--light);"
+					cover="${projectCover("recapreddit")}"
+					logo="${projectLogo("recapreddit")}"
+					date="2020"
+					name="Recap Reddit"
+					text="Automatically turn Reddit posts into recap videos.">
+					<an-buttons slot="footer">
+						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener">
+							<an-button style="--background: #FF4300; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
 				<!-- Wordbase -->
 				<an-project
 					class="card"
-					style="--theme-600: #A75C08; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #A75C08; --theme-600-contrast: var(--light);"
 					cover="${projectCover("wordbase")}"
 					logo="${projectLogo("wordbase")}"
 					date="2013 - 2016"
@@ -311,7 +330,7 @@ class App extends LitElement {
 				<!-- Ruandpiano -->
 				<an-project
 					class="card"
-					style="--theme-600: #151515; --theme-600-contrast: var(--light); --logo-size: 80px;"
+					style="--theme-600: #151515; --theme-600-contrast: var(--light);"
 					cover="${projectCover("ruandpiano")}"
 					logo="${projectLogo("ruandpiano")}"
 					date="2010 - 2013"

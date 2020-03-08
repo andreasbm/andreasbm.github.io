@@ -60,8 +60,8 @@ class Project extends Card {
 				}
 				
 				#logo {
-					width: var(--logo-size, 60px);
-					height: var(--logo-size, 60px);
+					width: var(--logo-size, 80px);
+					height: var(--logo-size, 80px);
 					object-fit: contain;
 					margin: 0 0 var(--spacing-m);
 				}

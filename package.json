@@ -7,7 +7,7 @@
 		"b": "npm run clean:dist && NODE_ENV=production parcel build index.html --experimental-scope-hoisting",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack",
-		"clean:dist": "rimraf dist",
+		"clean:dist": "rimraf dist"
 	},
 	"dependencies": {
 		"lit-element": "^2.2.1",
