@@ -11,6 +11,7 @@ import {
 	githubIconTemplate,
 	openIconTemplate,
 	sendIconTemplate,
+	twitterIconTemplate,
 	videoIconTemplate
 } from "./icons.js";
 import "./molecules/footer.js";
@@ -279,6 +280,31 @@ class App extends LitElement {
 					<an-buttons slot="footer">
 						<a href="https://perfectplaylist.app" rel="noopener">
 							<an-button style="--background: #1DB954; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
+				<!-- Picture Palette -->
+				<an-project
+					class="card"
+					style="--theme-600: #000000; --theme-600-contrast: var(--light);"
+					cover="${projectCover("picturepalette")}"
+					logo="${projectLogo("picturepalette")}"
+					date="2020"
+					name="Picture Palette"
+					text="Aesthetically pleasing palettes.">
+					<an-buttons slot="footer">
+						<a href="https://twitter.com/pic_palette" rel="noopener">
+							<an-button style="--background: #82535C; --foreground: var(--light);">
+								<span>Twitter Bot</span>
+								<an-icon .template="${twitterIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+						<a href="https://picture-palette.web.app" rel="noopener">
+							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
