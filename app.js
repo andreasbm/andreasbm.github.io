@@ -164,7 +164,7 @@ class App extends LitElement {
 						<span>See my projects</span>
 						<an-icon .template="${arrowDownIconTemplate}"></an-icon>
 					</an-button>
-					<a id="github-button" href="https://github.com/andreasbm" rel="noopener">
+					<a id="github-button" aria-label="Github link" href="https://github.com/andreasbm" rel="noopener">
 						<an-button>
 							<an-icon .template="${githubIconTemplate}"></an-icon>
 							<span>Go to my Github</span>
@@ -202,7 +202,7 @@ class App extends LitElement {
 							<span>Watch a product video</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://ideanote.io" rel="noopener">
+						<a href="https://ideanote.io" rel="noopener" aria-label="Ideanote link">
 							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -221,7 +221,11 @@ class App extends LitElement {
 					name="Laser Cat"
 					text="Shoot laser at things you want to remove from the internet.">
 					<an-buttons slot="footer">
-						<a href="https://lasercat.app" rel="noopener">
+						<an-button style="--background: var(--light); --foreground: #A15060;" @click="${() => showYoutubeVideo({youtubeId: "DHnhU6uP9vQ"})}">
+							<span>Watch a cat shooting laser</span>
+							<an-icon .template="${videoIconTemplate}"></an-icon>
+						</an-button>
+						<a href="https://lasercat.app" rel="noopener" aria-label="Laser Cat link">
 							<an-button style="--background: #8A7225; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -240,7 +244,7 @@ class App extends LitElement {
 					name="Web Skills"
 					text="A visual overview of useful skills to learn as a web developer.">
 					<an-buttons slot="footer">
-						<a href="https://andreasbm.github.io/web-skills" rel="noopener">
+						<a href="https://andreasbm.github.io/web-skills" rel="noopener" aria-label="Web Skills link">
 							<an-button style="--background: #15873D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -259,7 +263,7 @@ class App extends LitElement {
 					name="Weightless"
 					text="High quality web components with a small footprint.">
 					<an-buttons slot="footer">
-						<a href="https://weightless.dev" rel="noopener">
+						<a href="https://weightless.dev" rel="noopener" aria-label="Weightless link">
 							<an-button style="--background: #354D8D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -278,7 +282,7 @@ class App extends LitElement {
 					name="Perfect Playlist"
 					text="Create the perfect playlist based on you and your friends favorite music.">
 					<an-buttons slot="footer">
-						<a href="https://perfectplaylist.app" rel="noopener">
+						<a href="https://perfectplaylist.app" rel="noopener" aria-label="Perfect Playlist link">
 							<an-button style="--background: #1DB954; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -297,13 +301,13 @@ class App extends LitElement {
 					name="Picture Palette"
 					text="Aesthetically pleasing palettes.">
 					<an-buttons slot="footer">
-						<a href="https://twitter.com/pic_palette" rel="noopener">
+						<a href="https://twitter.com/pic_palette" rel="noopener" aria-label="Picture Palette Twitter bot link">
 							<an-button style="--background: #82535C; --foreground: var(--light);">
 								<span>Twitter Bot</span>
 								<an-icon .template="${twitterIconTemplate}"></an-icon>
 							</an-button>
 						</a>
-						<a href="https://picture-palette.web.app" rel="noopener">
+						<a href="https://picture-palette.web.app" rel="noopener" aria-label="Picture Palette link">
 							<an-button style="--background: #000000; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -326,7 +330,7 @@ class App extends LitElement {
 							<span>Watch a Recap video</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener">
+						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener" aria-label="Recap Reddit extension link">
 							<an-button style="--background: #FF4300; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -349,7 +353,7 @@ class App extends LitElement {
 							<span>Watch an epic battle</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://wordbaseapp.com" rel="noopener">
+						<a href="https://wordbaseapp.com" rel="noopener" aria-label="Wordbase link">
 							<an-button style="--background: #FF8800; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -372,7 +376,7 @@ class App extends LitElement {
 							<span>Watch my favorite recording</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://www.youtube.com/user/ruandpiano" rel="noopener">
+						<a href="https://www.youtube.com/user/ruandpiano" rel="noopener" aria-label="Ruandpiano link">
 							<an-button style="--background: #151515; --foreground: var(--light);">
 								<span>Go to Youtube</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
