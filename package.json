@@ -10,12 +10,12 @@
 		"clean:dist": "rimraf dist"
 	},
 	"dependencies": {
-		"lit-element": "^2.2.1",
-		"web-dialog": "0.0.8"
+		"lit-element": "^2.3.1",
+		"web-dialog": "0.0.11"
 	},
 	"devDependencies": {
 		"parcel-bundler": "^1.12.4",
-		"snowpack": "^1.4.0"
+		"snowpack": "^1.6.0"
 	},
 	"snowpack": {
 		"dedupe": [

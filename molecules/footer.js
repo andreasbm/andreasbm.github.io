@@ -18,6 +18,11 @@ class Footer extends LitElement {
 					color: var(--space-500-contrast);
 					padding: var(--spacing-l) var(--spacing-xxl);
 				}
+				
+				#email {
+					color: inherit;
+					text-decoration: underline;
+				}
 			`
 		];
 	}
@@ -25,7 +30,7 @@ class Footer extends LitElement {
 	render () {
 		return html`
 			<footer id="footer">
-				<span>©2020 - Andreas Mehlsen</span>
+				<span>©2020 - Andreas Mehlsen - <a id="email" href="mailto:andmehlsen@gmail.com" rel="noopener" aria-label="Open email">andmehlsen@gmail.com</a></span>
 			</footer>
 		`;
 	}

@@ -170,10 +170,10 @@ class App extends LitElement {
 							<span>Go to my Github</span>
 						</an-button>
 					</a>
-					<a href="mailto:andmehlsen@gmail.com" rel="noopener" aria-label="Open email">
-						<an-button id="contact-button" style="--background: var(--yellow-500); --foreground: var(--yellow-500-contrast)"  @click="${() => this.scrollTo("contact")}">
-							<span>Contact me</span>
-							<an-icon .template="${sendIconTemplate}"></an-icon>
+					<a href="https://twitter.com/AndreasMehlsen" rel="noopener" aria-label="Say hi">
+						<an-button id="contact-button" style="--background: var(--yellow-500); --foreground: var(--yellow-500-contrast)">
+							<span>Say hi on Twitter</span>
+							<an-icon .template="${twitterIconTemplate}"></an-icon>
 						</an-button>
 					</a>
 				</an-buttons>
