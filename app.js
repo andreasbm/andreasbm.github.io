@@ -225,6 +225,26 @@ class App extends LitElement {
 			<an-container id="projects">
 				<an-text role="heading" aria-level="2" center margin="large">My Projects</an-text>
 				
+				<!-- Web skills -->
+				<an-project
+					class="card"
+					style="--theme-600: #15873D; --theme-600-contrast: var(--light);"
+					cover="${projectCover("webskills")}"
+					logo="${projectLogo("webskills")}"
+					date="2020 - Present"
+					name="Web Skills"
+					text="A visual overview of useful skills to learn as a web developer.">
+					<an-buttons slot="footer">
+						<a href="https://andreasbm.github.io/web-skills" rel="noopener" aria-label="Web Skills link">
+							<an-button style="--background: #15873D; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
+				
 				<!-- Ideanote -->
 				<an-project
 					class="card"
@@ -264,25 +284,6 @@ class App extends LitElement {
 						</an-button>
 						<a href="https://lasercat.app" rel="noopener" aria-label="Laser Cat link">
 							<an-button style="--background: #8A7225; --foreground: var(--light);">
-								<span>Go to website</span>
-								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
-							</an-button>
-						</a>
-					</an-buttons>
-				</an-project>
-				
-				<!-- Web skills -->
-				<an-project
-					class="card"
-					style="--theme-600: #15873D; --theme-600-contrast: var(--light);"
-					cover="${projectCover("webskills")}"
-					logo="${projectLogo("webskills")}"
-					date="2020 - Present"
-					name="Web Skills"
-					text="A visual overview of useful skills to learn as a web developer.">
-					<an-buttons slot="footer">
-						<a href="https://andreasbm.github.io/web-skills" rel="noopener" aria-label="Web Skills link">
-							<an-button style="--background: #15873D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
@@ -491,7 +492,7 @@ class App extends LitElement {
 				<!-- Coffee -->
 				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);">
 					<an-section-header center headline="Wanna share a cup of coffee?" text="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee."></an-section-header>
-					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Share a coffee">
+					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Coffee link">
 						<an-button id="coffee-button">
 							<div id="steam-container">
 								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none"xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
