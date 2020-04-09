@@ -495,7 +495,7 @@ class App extends LitElement {
 					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Coffee link">
 						<an-button id="coffee-button">
 							<div id="steam-container">
-								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none"xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
+								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
 								<an-icon .template="${coffeeIconTemplate}"></an-icon>
 							</div>
 							<span>Support me with a cup of coffee</span>
