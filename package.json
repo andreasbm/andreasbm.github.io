@@ -2,9 +2,8 @@
 	"name": "andreas",
 	"version": "1.0.0",
 	"scripts": {
-		"serve": "http-server --push-state -o -c-1 -p 1200 -a localhost",
+		"serve": "npx servor . index.html 1337 --browse",
 		"s": "npm run serve",
-		"b": "npm run clean:dist && NODE_ENV=production parcel build index.html --experimental-scope-hoisting",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack",
 		"clean:dist": "rimraf dist"
@@ -14,7 +13,6 @@
 		"web-dialog": "0.0.11"
 	},
 	"devDependencies": {
-		"parcel-bundler": "^1.12.4",
 		"snowpack": "^1.6.0"
 	},
 	"snowpack": {

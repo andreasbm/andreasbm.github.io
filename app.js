@@ -8,9 +8,9 @@ import "./atoms/text.js";
 import {
 	arrowDownIconTemplate,
 	arrowRightIconTemplate,
+	coffeeIconTemplate,
 	githubIconTemplate,
 	openIconTemplate,
-	sendIconTemplate,
 	twitterIconTemplate,
 	videoIconTemplate
 } from "./icons.js";
@@ -23,7 +23,6 @@ import {sharedStyles} from "./styles/shared.js";
 import {showRecapRedditVideo} from "./util/show-recap-reddit-video.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
 import {css, html, LitElement} from "./web_modules/lit-element.js";
-
 
 const ASSETS_BASE_PATH = `/assets`;
 const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
@@ -76,6 +75,44 @@ class App extends LitElement {
 				
 				#books-card .media-grid {
 					--media-height: 266px;
+				}
+				
+				#coffee-button {
+					--background: var(--blue-600);
+					--foreground: var(--blue-600-contrast);
+					padding: var(--spacing-xl) var(--spacing-xxl);
+				    font-size: 1.2rem;
+				}
+				
+				#steam-container {
+					position: relative;
+				}
+				
+				#steam {
+				  width: 80%;
+				  position: absolute;
+				  width: 60%;
+				  bottom: 100%;
+				  left: 50%;
+				  animation: 6s linear steaming infinite;
+				  filter: blur(2px);
+				  color: #CCCACA;
+				}
+				
+				
+				@keyframes steaming {
+				  0% {
+					opacity: 0;
+					transform: translate(-50%, 100%) rotate(40deg);
+				  }
+				  50% {
+					opacity: 1;
+					transform: translate(-50%, 0);
+				  }
+				  100% {
+					opacity: 0;
+					transform: translate(-50%, -80%) rotate(40deg);
+				  }
 				}
 				
 				@media (max-width: 1000px) {
@@ -449,6 +486,20 @@ class App extends LitElement {
 							<an-media src="${mediaCover("syntax")}"></an-media>
 						</a>
 					</div>
+				</an-card>
+				
+				<!-- Coffee -->
+				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);">
+					<an-section-header center headline="Wanna share a cup of coffee?" text="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee."></an-section-header>
+					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Share a coffee">
+						<an-button id="coffee-button">
+							<div id="steam-container">
+								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none"xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
+								<an-icon .template="${coffeeIconTemplate}"></an-icon>
+							</div>
+							<span>Support me with a cup of coffee</span>
+						</an-button>
+					</a>
 				</an-card>
 				
 				<!-- Social -->

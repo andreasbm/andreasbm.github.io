@@ -49,15 +49,15 @@ class Text extends LitElement {
 				}
 				
 				:host([margin="medium"]) {
-					margin: 0 0 var(--spacing-s);
+					margin: 0 auto var(--spacing-s);
 				}
 				
 				:host([margin="large"]) {
-					margin: 0 0 var(--spacing-l);
+					margin: 0 auto var(--spacing-l);
 				}
 				
 				:host([margin="xlarge"]) {
-					margin: 0 0 var(--spacing-xxxl);
+					margin: 0 auto var(--spacing-xxxl);
 				}
 			`
 		];

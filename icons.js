@@ -47,3 +47,7 @@ export const playIconTemplate = svg`
 export const openIconTemplate = svg`
 	<svg preserveAspectRatio="none" viewBox="0 0 16 16" width="100%" height="100%"><path d="M14.222 14.222H1.778V1.778H8V0H1.778C.79 0 0 .8 0 1.778v12.444C0 15.2.791 16 1.778 16h12.444C15.2 16 16 15.2 16 14.222V8h-1.778v6.222zM9.778 0v1.778h3.19l-8.737 8.738 1.253 1.253 8.738-8.738v3.191H16V0H9.778z" fill="currentColor" fill-rule="nonzero"/></svg>
 `;
+
+export const coffeeIconTemplate = svg`
+	<svg preserveAspectRatio="none" viewBox="0 0 43 43" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><path d="M37.572 11.506a2.997 2.997 0 011.29 2.988l-3.504 21a2.994 2.994 0 01-1.07 1.836l-.387 3.048A3 3 0 0130.925 43h-18.69a3 3 0 01-2.977-2.622l-.412-3.243a2.992 2.992 0 01-.851-1.641l-3.505-21a3 3 0 011.114-2.86L5.13 7.905A4.002 4.002 0 016 0h31a4 4 0 011.035 7.865l-.463 3.641zM24.992 17a3.992 3.992 0 00-3.492 2.087A3.992 3.992 0 0018.009 17C15.795 17 14 19.097 14 21.358 14 27.038 21.5 31 21.5 31s7.5-3.962 7.5-9.642C29 19.098 27.205 17 24.991 17z" fill="#FFF" fill-rule="nonzero"/></svg>
+`;

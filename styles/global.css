@@ -31,7 +31,7 @@ html {
 
 	--blue-400: #8A8FE2;
 	--blue-500: #6D73DB;
-	--blue-600: #575CAF;
+	--blue-600: #4A4FA9; /* #575CAF; */
 	--blue-400-contrast: var(--light);
 	--blue-500-contrast: var(--light);
 	--blue-600-contrast: var(--light);
@@ -102,12 +102,12 @@ body {
 		--font-size-l: 1.4rem;
 		--font-size-xl: 1.8rem;
 
-		--spacing-xl: 22px;
-		--spacing-xxl: 24px;
-		--spacing-xxxl: 28px;
-		--spacing-xxxxl: 32px;
-		--spacing-xxxxxl: 36px;
-		--spacing-xxxxxxl: 40px;
+		--spacing-xl: 1.57rem; /*22px;*/
+		--spacing-xxl: 1.71rem; /*24px;*/
+		--spacing-xxxl: 2rem; /*28px;*/
+		--spacing-xxxxl: 2.28rem; /*32px;*/
+		--spacing-xxxxxl: 2.57rem; /*36px;*/
+		--spacing-xxxxxxl: 2.85rem; /*40px;*/
 	}
 
 	laser-cat {

@@ -5,6 +5,7 @@ ec2-user-key-pair.pem
 /tmp
 env.json
 package-lock.json
+/dist/
 
 # compiled output
 

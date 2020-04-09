@@ -25,6 +25,10 @@ class SectionHeader extends LitElement {
 				:host {
 					display: block;
 				}
+				
+				#text {
+					max-width: 45rem;
+				}
 			`
 		];
 	}
