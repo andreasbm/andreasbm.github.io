@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="444px" height="444px" viewBox="0 0 444 444" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>projects/when-to-post-on-reddit/logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="444" height="444" rx="115"></rect>
+    </defs>
+    <g id="projects/when-to-post-on-reddit/logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Rectangle" fill="#2A9D8F" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Group-6" mask="url(#mask-2)">
+                <g transform="translate(45.000000, 90.000000)">
+                    <g id="Group-5" transform="translate(56.000000, 0.000000)">
+                        <g id="Group" fill="#FFFFFF" fill-rule="nonzero">
+                            <rect id="Rectangle-2" x="0.397260274" y="88" width="49.8739726" height="175.60274"></rect>
+                            <rect id="Rectangle-2" x="96.4958904" y="0" width="49.8739726" height="263.60274"></rect>
+                            <rect id="Rectangle-2" x="192.594521" y="165.071233" width="49.8739726" height="98.5315068"></rect>
+                        </g>
+                    </g>
+                    <g id="Group-4" opacity="0.25703125" transform="translate(0.000000, 24.000000)">
+                        <path d="M95.833416,133.643868 C135.11639,107.953558 188.583588,92.15 247.5,92.15 C306.416412,92.15 359.88361,107.953558 399.166584,133.643868 C408.850653,127.845375 420.365477,124.483333 432.720588,124.483333 C467.116558,124.483333 495,150.540361 495,182.683333 C495,203.557943 483.239899,221.865749 465.573258,232.136609 C465.778456,234.76513 465.882353,237.411846 465.882353,240.075 C465.882353,321.771722 368.109243,388 247.5,388 C126.890757,388 29.1176471,321.771722 29.1176471,240.075 C29.1176471,237.411846 29.221544,234.76513 29.426742,232.136609 C11.7601008,221.865749 0,203.557943 0,182.683333 C0,150.540361 27.8834424,124.483333 62.2794118,124.483333 C74.6345231,124.483333 86.1493472,127.845375 95.833416,133.643868 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <g id="Group" transform="translate(241.029412, 0.000000)" fill-rule="nonzero">
+                            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" points="0 105.285857 17.2750561 19.2931221 79.4069881 28.9857297"></polyline>
+                            <ellipse id="Oval" fill="#FFFFFF" cx="79.2647059" cy="27.4833333" rx="27.5" ry="27.4833333"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

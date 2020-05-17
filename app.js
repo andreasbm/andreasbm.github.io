@@ -345,18 +345,18 @@ class App extends LitElement {
 					</an-buttons>
 				</an-project>
 				
-				<!-- Perfect Playlist -->
+				<!-- When to post on reddit -->
 				<an-project
 					class="card"
-					style="--theme-600: #1DB954; --theme-600-contrast: var(--light);"
-					cover="${projectCover("perfectplaylist")}"
-					logo="${projectLogo("perfectplaylist")}"
-					date="2019"
-					name="Perfect Playlist"
-					text="Create the perfect playlist based on you and your friends favorite music.">
+					style="--theme-600: #2a9d8f; --theme-600-contrast: var(--light);"
+					cover="${projectCover("when-to-post-on-reddit")}"
+					logo="${projectLogo("when-to-post-on-reddit")}"
+					date="2020"
+					name="When to Post on Reddit"
+					text="Dive into the analysis and learn when it is the best time to post on Reddit.">
 					<an-buttons slot="footer">
-						<a href="https://perfectplaylist.app" rel="noopener" aria-label="Perfect Playlist link">
-							<an-button style="--background: #1DB954; --foreground: var(--light);">
+						<a href="https://andreasbm.github.io/when-to-post-on-reddit" rel="noopener" aria-label="When to Post on Reddit link">
+							<an-button style="--background: #2a9d8f; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
@@ -405,6 +405,25 @@ class App extends LitElement {
 						</an-button>
 						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener" aria-label="Recap Reddit extension link">
 							<an-button style="--background: #FF4300; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
+				<!-- Perfect Playlist -->
+				<an-project
+					class="card"
+					style="--theme-600: #1DB954; --theme-600-contrast: var(--light);"
+					cover="${projectCover("perfectplaylist")}"
+					logo="${projectLogo("perfectplaylist")}"
+					date="2019"
+					name="Perfect Playlist"
+					text="Create the perfect playlist based on you and your friends favorite music.">
+					<an-buttons slot="footer">
+						<a href="https://perfectplaylist.app" rel="noopener" aria-label="Perfect Playlist link">
+							<an-button style="--background: #1DB954; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
