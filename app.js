@@ -82,6 +82,8 @@ class App extends LitElement {
 					--foreground: var(--blue-600-contrast);
 					padding: var(--spacing-xl) var(--spacing-xxl);
 				    font-size: 1.2rem;
+				    z-index: 123456;
+                    position: relative;
 				}
 				
 				#steam-container {
@@ -180,18 +182,51 @@ class App extends LitElement {
 		}
 	}
 
-	spawnLaserCat () {
-		import("./laser-cat/laser-cat.js").then(() => {
-			const $laserCat = document.createElement("laser-cat");
-			$laserCat.setAttribute("sounds", JSON.stringify({
-				meow: ["./assets/audio/meow.mp3"],
-				laser: ["./assets/audio/laser.mp3"],
-				rainbow: ["./assets/audio/rainbow.mp3"]
-			}));
-			document.body.appendChild($laserCat);
-		});
+	async startParty () {
+		await import("./molecules/dj.js");
+
+		// Query or append the dj element
+		let $dj = document.querySelector("#dj");
+		if ($dj == null) {
+			$dj = document.createElement("an-dj");
+			$dj.id = "dj";
+			document.body.appendChild($dj);
+
+			// Set timeout to make it animate
+			setTimeout(() => {
+				$dj.party = true;
+			}, 100);
+		} else {
+			$dj.party = true;
+		}
+
 	}
 
+	stopParty () {
+		let $dj = document.querySelector("#dj");
+		if ($dj != null) {
+			$dj.removeAttribute("party");
+		}
+	}
+
+	/**
+	 * Spawns the laser cat.
+	 */
+	async spawnLaserCat () {
+		await import("./laser-cat/laser-cat.js");
+		const $laserCat = document.createElement("laser-cat");
+		$laserCat.setAttribute("sounds", JSON.stringify({
+			meow: ["./assets/audio/meow.mp3"],
+			laser: ["./assets/audio/laser.mp3"],
+			rainbow: ["./assets/audio/rainbow.mp3"]
+		}));
+		document.body.appendChild($laserCat);
+	}
+
+	/**
+	 * Renders the element.
+	 * @returns {f}
+	 */
 	render () {
 		return html`
 			<!-- Header -->
@@ -490,10 +525,10 @@ class App extends LitElement {
 				</an-card>
 				
 				<!-- Coffee -->
-				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);">
+				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);" >
 					<an-section-header center headline="Wanna share a cup of coffee?" text="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee."></an-section-header>
 					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Coffee link">
-						<an-button id="coffee-button">
+						<an-button id="coffee-button" @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}">
 							<div id="steam-container">
 								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
 								<an-icon .template="${coffeeIconTemplate}"></an-icon>
