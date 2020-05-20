@@ -129,6 +129,11 @@ class App extends LitElement {
 				transport: 'beacon'
 			});
 		});
+	}
+
+	firstUpdated (e) {
+		super.firstUpdated(e);
+		this.$header = this.shadowRoot.querySelector("#header");
 
 		// Defer resources that are nice to have
 		setTimeout(() => {
@@ -172,12 +177,14 @@ class App extends LitElement {
 			$party.party = true;
 		}
 
+		this.$header.img = `assets/andreas-disco.png`;
 	}
 
 	stopParty () {
 		let $party = document.querySelector("#party");
 		if ($party != null) {
 			$party.removeAttribute("party");
+			this.$header.img = `assets/andreas.png`;
 		}
 	}
 
