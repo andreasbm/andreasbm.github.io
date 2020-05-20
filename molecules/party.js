@@ -16,7 +16,7 @@ function setRandomPosition ($elem) {
 }
 
 const STARS = [...Array(10)];
-class Dj extends LitElement {
+class Party extends LitElement {
 
 	static get properties () {
 		return {
@@ -90,4 +90,4 @@ class Dj extends LitElement {
 	}
 }
 
-customElements.define("an-dj", Dj);
+customElements.define("an-party", Party);

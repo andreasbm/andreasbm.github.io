@@ -5,10 +5,10 @@ import "./atoms/icon.js";
 import "./atoms/media.js";
 import "./atoms/section-header.js";
 import "./atoms/text.js";
+import "./atoms/coffee-cup.js";
 import {
 	arrowDownIconTemplate,
 	arrowRightIconTemplate,
-	coffeeIconTemplate,
 	githubIconTemplate,
 	openIconTemplate,
 	twitterIconTemplate,
@@ -19,6 +19,7 @@ import "./molecules/header.js";
 import "./molecules/project.js";
 import "./molecules/skills.js";
 import "./molecules/social-buttons.js";
+import "./molecules/coffee-button.js";
 import {sharedStyles} from "./styles/shared.js";
 import {showRecapRedditVideo} from "./util/show-recap-reddit-video.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
@@ -27,6 +28,7 @@ import {css, html, LitElement} from "./web_modules/lit-element.js";
 const ASSETS_BASE_PATH = `/assets`;
 const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
 const GA_MEASUREMENT_ID = "UA-96179028-10";
+const COFFEE_LINK = "https://buymeacoff.ee/AndreasMehlsen";
 
 function projectPath (id, extra) {
 	return `${PROJECT_ASSETS_BASE_PATH}/${id}${extra != null ? `/${extra}` : ""}`;
@@ -86,37 +88,6 @@ class App extends LitElement {
                     position: relative;
 				}
 				
-				#steam-container {
-					position: relative;
-				}
-				
-				#steam {
-				  width: 80%;
-				  position: absolute;
-				  width: 60%;
-				  bottom: 100%;
-				  left: 50%;
-				  animation: 6s linear steaming infinite;
-				  filter: blur(2px);
-				  color: #CCCACA;
-				}
-				
-				
-				@keyframes steaming {
-				  0% {
-					opacity: 0;
-					transform: translate(-50%, 100%) rotate(40deg);
-				  }
-				  50% {
-					opacity: 1;
-					transform: translate(-50%, 0);
-				  }
-				  100% {
-					opacity: 0;
-					transform: translate(-50%, -80%) rotate(40deg);
-				  }
-				}
-				
 				@media (max-width: 1000px) {
 					#contact-button, #projects-button {
 						display: none;
@@ -159,9 +130,10 @@ class App extends LitElement {
 			});
 		});
 
-		// Spawn laser cat after a delay
+		// Defer resources that are nice to have
 		setTimeout(() => {
-			this.spawnLaserCat();
+			import("./laser-cat/laser-cat.js").then();
+			import("./molecules/coffee-button.js").then();
 		}, 2000);
 	}
 
@@ -183,44 +155,30 @@ class App extends LitElement {
 	}
 
 	async startParty () {
-		await import("./molecules/dj.js");
+		await import("./molecules/party.js");
 
 		// Query or append the dj element
-		let $dj = document.querySelector("#dj");
-		if ($dj == null) {
-			$dj = document.createElement("an-dj");
-			$dj.id = "dj";
-			document.body.appendChild($dj);
+		let $party = document.querySelector("#party");
+		if ($party == null) {
+			$party = document.createElement("an-party");
+			$party.id = "party";
+			document.body.appendChild($party);
 
 			// Set timeout to make it animate
 			setTimeout(() => {
-				$dj.party = true;
+				$party.party = true;
 			}, 100);
 		} else {
-			$dj.party = true;
+			$party.party = true;
 		}
 
 	}
 
 	stopParty () {
-		let $dj = document.querySelector("#dj");
-		if ($dj != null) {
-			$dj.removeAttribute("party");
+		let $party = document.querySelector("#party");
+		if ($party != null) {
+			$party.removeAttribute("party");
 		}
-	}
-
-	/**
-	 * Spawns the laser cat.
-	 */
-	async spawnLaserCat () {
-		await import("./laser-cat/laser-cat.js");
-		const $laserCat = document.createElement("laser-cat");
-		$laserCat.setAttribute("sounds", JSON.stringify({
-			meow: ["./assets/audio/meow.mp3"],
-			laser: ["./assets/audio/laser.mp3"],
-			rainbow: ["./assets/audio/rainbow.mp3"]
-		}));
-		document.body.appendChild($laserCat);
 	}
 
 	/**
@@ -546,12 +504,9 @@ class App extends LitElement {
 				<!-- Coffee -->
 				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);" >
 					<an-section-header center headline="Wanna share a cup of coffee?" text="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee."></an-section-header>
-					<a href="https://www.buymeacoffee.com/AndreasMehlsen" rel="noopener" aria-label="Coffee link">
+					<a href="${COFFEE_LINK}" rel="noopener" aria-label="Coffee link">
 						<an-button id="coffee-button" @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}">
-							<div id="steam-container">
-								<svg id="steam" viewBox="0 0 250 327" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" stroke-width="41"><path d="M119.563 265.584c-27-20.344-43.822-41.277-50.465-62.8-6.643-21.522-7.9-45.48-3.771-71.875M170.152 189.86c12.91-24.089 19.139-47.393 18.685-69.913-.453-22.52-5.297-42.502-14.53-59.947"/></g></svg>
-								<an-icon .template="${coffeeIconTemplate}"></an-icon>
-							</div>
+							<an-coffee-cup></an-coffee-cup>
 							<span>Support me with a cup of coffee</span>
 						</an-button>
 					</a>
@@ -567,6 +522,12 @@ class App extends LitElement {
 			
 			<!-- Footer -->
 			<an-footer></an-footer>
+			
+			<!-- Coffee button -->
+			<an-coffee-button href="${COFFEE_LINK}" message="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee." @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}"></an-coffee-button>
+			
+			<!-- Laser cat -->
+			<laser-cat sounds="${JSON.stringify({meow: ["./assets/audio/meow.mp3"],laser: ["./assets/audio/laser.mp3"],rainbow: ["./assets/audio/rainbow.mp3"]})}"></laser-cat>
 		`;
 	}
 }

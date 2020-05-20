@@ -11,11 +11,11 @@ export const sharedCharacterStyles = `
 		cursor: pointer;
 
 		transform: translateY(90%);
-		transition: transform ease-in-out 200ms;
 	}
 
 	:host(:hover) {
 		transform: translateY(43%);
+		transition: transform ease-in-out 200ms;
 	}
 
 	:host([active]) {
