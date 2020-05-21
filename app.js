@@ -532,9 +532,6 @@ class App extends LitElement {
 			
 			<!-- Coffee button -->
 			<an-coffee-button href="${COFFEE_LINK}" message="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee." @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}"></an-coffee-button>
-			
-			<!-- Laser cat -->
-			<laser-cat sounds="${JSON.stringify({meow: ["./assets/audio/meow.mp3"],laser: ["./assets/audio/laser.mp3"],rainbow: ["./assets/audio/rainbow.mp3"]})}"></laser-cat>
 		`;
 	}
 }
