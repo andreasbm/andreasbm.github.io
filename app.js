@@ -354,6 +354,25 @@ class App extends LitElement {
 					</an-buttons>
 				</an-project>
 				
+				<!-- Game Deals -->
+				<an-project
+					class="card"
+					style="--theme-600: #00022E; --theme-600-contrast: var(--light);"
+					cover="${projectCover("game-deals")}"
+					logo="${projectLogo("game-deals")}"
+					date="2020"
+					name="Game Deals"
+					text="A curation of free and discounted games.">
+					<an-buttons slot="footer">
+						<a href="https://andreasbm.github.io/game-deals" rel="noopener" aria-label="Game Deals">
+							<an-button style="--background: #00022E; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
 				<!-- Recap Reddit -->
 				<an-project
 					class="card"
