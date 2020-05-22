@@ -32,7 +32,7 @@ class Project extends Card {
 				:host {
 					background: var(--theme-600);
 					padding: var(--spacing-xxxxxxl) var(--spacing-xxl);
-					border: 2px solid var(--theme-600);
+					border-color: var(--theme-600);
 				}
 				
 				#cover {

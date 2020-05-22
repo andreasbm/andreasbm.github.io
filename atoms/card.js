@@ -11,8 +11,8 @@ export class Card extends LitElement {
 					background: var(--shade-300);
 					color: var(--shade-300-contrast);
 					border-radius: var(--border-radius-m);
+					border: 2px solid var(--shade-600);
 					padding: var(--spacing-xxxxl);
-					box-shadow: var(--shadow);
 					position: relative;
 					overflow: hidden;
 				}

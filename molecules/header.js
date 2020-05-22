@@ -10,6 +10,10 @@ class Header extends LitElement {
 			},
 			text: {
 				type: String
+			},
+			pause: {
+				type: Boolean,
+				reflect: true
 			}
 		}
 	}
@@ -18,6 +22,10 @@ class Header extends LitElement {
 		return [
 			sharedStyles,
 			css`
+				:host([pause]) #sun {
+					animation-play-state: paused;
+				}
+				
 				#header-container {
 					position: relative;
 				}
@@ -51,6 +59,7 @@ class Header extends LitElement {
 					transform-origin: 0 0;
 					width: 2000px;
 					height: 2000px;
+					contain: strict;
 				}
 				
 				#sun > path {
@@ -113,8 +122,6 @@ class Header extends LitElement {
 						transform: scale(1);;
 					}
 				}
-				
-				
 			`
 		];
 	}

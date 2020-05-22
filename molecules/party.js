@@ -1,6 +1,7 @@
 import "./../atoms/disco-ball.js";
 import {sharedStyles} from "./../styles/shared.js";
 import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {repeat} from "./../web_modules/lit-html/directives/repeat.js";
 
 function randomPosition () {
 	return {
@@ -39,14 +40,15 @@ class Party extends LitElement {
                     top: 0;
                     left: 0;
                     pointer-events: none;
-				}
-				
-				:host([party]) {
-				    background: rgba(0, 0, 0, 0.6);
+                    contain: strict;
 				}
 				
 				:host([party]) #disco-ball {
 					transform: translate(-50%, 0);
+				}
+				
+				:host([party]) #overlay, :host([party]) .star {
+					opacity: 1;
 				}
 				
 				#disco-ball {
@@ -67,6 +69,20 @@ class Party extends LitElement {
 					animation: 600ms ease-in-out infinite in-out alternate;
 				}
 				
+				#overlay {
+				    background: rgba(0, 0, 0, 0.6);
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				}
+				
+				#overlay, .star {
+				    transition: opacity 80ms ease;
+				    opacity: 0;
+				}
+				
 				@keyframes in-out {
 				  0% { transform: scale(0) }
 				  50% { transform: scale(1); }
@@ -83,9 +99,10 @@ class Party extends LitElement {
 	render () {
 		return html`
 			<an-disco-ball id="disco-ball"></an-disco-ball>
-			${this.party ? STARS.map(() => html`
+			<div id="overlay"></div>
+			${repeat(STARS, () => html`
 				<img class="star" src="/assets/star.svg" role="presentation" alt="Shiny star" @animationiteration="${this.starIterationComplete}" style="left: ${Math.random() * 100}%; top: ${Math.random() * 100}%; animation-delay: ${Math.random() * 1000}ms" />
-			`) : undefined}
+			`)}
 		`;
 	}
 }

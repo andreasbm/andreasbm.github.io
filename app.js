@@ -70,6 +70,17 @@ class App extends LitElement {
 				#skills-card {
 				    background: var(--space-500);
                     color: var(--space-500-contrast);
+					box-shadow: 0 2px 10px -5px var(--space-600);
+				}
+				
+				#coffee-card {
+					background: var(--blue-500);
+					color: var(--blue-500-contrast);
+					box-shadow: 0 2px 10px -5px var(--blue-600);
+				}
+				
+				#skills-card, #coffee-card {
+					border: none;
 				}
 				
 				#music-card {
@@ -163,28 +174,37 @@ class App extends LitElement {
 		await import("./molecules/party.js");
 
 		// Query or append the dj element
-		let $party = document.querySelector("#party");
-		if ($party == null) {
-			$party = document.createElement("an-party");
-			$party.id = "party";
-			document.body.appendChild($party);
+		this.removeParty();
+		const $party = document.createElement("an-party");
+		$party.classList.add("party");
+		document.body.appendChild($party);
 
-			// Set timeout to make it animate
-			setTimeout(() => {
-				$party.party = true;
-			}, 100);
-		} else {
+		// Set timeout to make it animate
+		setTimeout(() => {
 			$party.party = true;
-		}
+		}, 100);
 
 		this.$header.img = `assets/andreas-disco.png`;
+		this.$header.pause = true;
+	}
+
+	removeParty () {
+		const $parties = Array.from(document.querySelectorAll(".party"));
+		for (const $party of $parties) {
+			$party.remove();
+		}
 	}
 
 	stopParty () {
-		let $party = document.querySelector("#party");
-		if ($party != null) {
+		this.$header.img = `assets/andreas.png`;
+		this.$header.pause = false;
+		const $parties = Array.from(document.querySelectorAll(".party"));
+
+		for (const $party of $parties) {
 			$party.removeAttribute("party");
-			this.$header.img = `assets/andreas.png`;
+			setTimeout(() => {
+				$party.remove();
+			}, 200);
 		}
 	}
 
@@ -528,7 +548,7 @@ class App extends LitElement {
 				</an-card>
 				
 				<!-- Coffee -->
-				<an-card class="card" style="background: var(--blue-500); color: var(--blue-500-contrast);" >
+				<an-card id="coffee-card" class="card">
 					<an-section-header center headline="Wanna share a cup of coffee?" text="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee."></an-section-header>
 					<a href="${COFFEE_LINK}" rel="noopener" aria-label="Coffee link">
 						<an-button id="coffee-button" @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}">
