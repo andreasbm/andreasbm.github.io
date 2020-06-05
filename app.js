@@ -108,6 +108,10 @@ class App extends LitElement {
 						--media-width: 100%;
 						grid-template-columns: repeat(auto-fill, minmax(var(--media-width), 1fr));
 					}
+					
+					#coffee-fab-button {
+						display: none;
+					}
 				}
 			`
 		];
@@ -570,7 +574,7 @@ class App extends LitElement {
 			<an-footer></an-footer>
 			
 			<!-- Coffee button -->
-			<an-coffee-button href="${COFFEE_LINK}" message="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee." @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}"></an-coffee-button>
+			<an-coffee-button id="coffee-fab-button" href="${COFFEE_LINK}" message="Running free services gets expensive in the long run. If you like my projects it would absolutely make my day if you support me with a cup of coffee." @mouseenter="${() => this.startParty()}" @mouseleave="${() => this.stopParty()}"></an-coffee-button>
 		`;
 	}
 }
