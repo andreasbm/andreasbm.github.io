@@ -28,7 +28,7 @@ import {css, html, LitElement} from "./web_modules/lit-element.js";
 const ASSETS_BASE_PATH = `/assets`;
 const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
 const GA_MEASUREMENT_ID = "UA-96179028-10";
-const COFFEE_LINK = "https://buymeacoff.ee/AndreasMehlsen?via=AndreasMehlsen";
+const COFFEE_LINK = "https://buymeacoff.ee/AndreasMehlsen";
 
 function projectPath (id, extra) {
 	return `${PROJECT_ASSETS_BASE_PATH}/${id}${extra != null ? `/${extra}` : ""}`;
