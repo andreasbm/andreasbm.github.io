@@ -6,7 +6,7 @@ import "./../atoms/icon.js";
 import "./../atoms/text.js";
 import {css, html} from "./../web_modules/lit-element.js";
 
-class SocialButtons extends Buttons {
+class SayHiButtons extends Buttons {
 	static get styles () {
 		return [
 			super.styles,
@@ -50,4 +50,4 @@ class SocialButtons extends Buttons {
 	}
 }
 
-customElements.define("an-social-buttons", SocialButtons);
+customElements.define("an-social-buttons", SayHiButtons);

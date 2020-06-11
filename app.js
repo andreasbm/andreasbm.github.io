@@ -18,7 +18,7 @@ import "./molecules/footer.js";
 import "./molecules/header.js";
 import "./molecules/project.js";
 import "./molecules/skills.js";
-import "./molecules/social-buttons.js";
+import "./molecules/say-hi-buttons.js";
 import "./molecules/coffee-button.js";
 import {sharedStyles} from "./styles/shared.js";
 import {showRecapRedditVideo} from "./util/show-recap-reddit-video.js";
