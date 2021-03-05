@@ -565,7 +565,7 @@ class App extends LitElement {
 				<!-- Social -->
 				<an-card class="card">
 					<an-section-header center headline="Say hi" text="If you want to learn more about what I'm doing, find me on my favorite platforms."></an-section-header>
-					<an-social-buttons></an-social-buttons>
+					<an-say-hi-buttons></an-say-hi-buttons>
 				</an-card>
 			
 			</an-container>

@@ -44,8 +44,8 @@ class Party extends LitElement {
 				}
 				
 				:host([party]) #disco-ball {
-					transform: translate(-50%, 0);
-				}
+                  transform: translate(-50%, 0);
+                }
 				
 				:host([party]) #overlay, :host([party]) .star {
 					opacity: 1;
@@ -54,8 +54,8 @@ class Party extends LitElement {
 				#disco-ball {
 					top: 0;
 					left: 50%;
-					transform: translate(-50%, -150%);
-					transition: 200ms ease transform;
+                  	transform: translate(-50%, -150%);
+                    /* Weird bug.. transition: 200ms ease transform;*/
 				}
 				
 				.star, #disco-ball {
