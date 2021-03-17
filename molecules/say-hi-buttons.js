@@ -39,7 +39,7 @@ class SayHiButtons extends Buttons {
 					<span>Twitter</span>
 				</an-button>
 			</a>
-			<a href="https://www.instagram.com/andreas_bm" target="_blank" rel="noopener">
+			<a href="https://www.instagram.com/andreas.kbh" target="_blank" rel="noopener">
 				<an-button style="--background: #C13584; --foreground: var(--light);">
 					<an-icon .template="${instagramIconTemplate}"></an-icon>
 					<span>Instagram</span>
