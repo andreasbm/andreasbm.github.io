@@ -2,7 +2,7 @@ import {Buttons} from "../atoms/buttons.js";
 import {
 	githubIconTemplate,
 	instagramIconTemplate,
-	linkedInIconTemplate,
+	linkedInIconTemplate, spotifyIconTemplate,
 	twitterIconTemplate
 } from "../icons.js";
 import "./../atoms/button.js";
@@ -45,12 +45,12 @@ class SayHiButtons extends Buttons {
 					<span>Instagram</span>
 				</an-button>
 			</a>
-			<!--<a href="https://open.spotify.com/user/114799118" target="_blank" rel="noopener">
+			<a href="https://open.spotify.com/user/114799118" target="_blank" rel="noopener">
 				<an-button style="--background: #1DB954; --foreground: var(--light);">
-					<an-icon .template="$ {spotifyIconTemplate}"></an-icon>
+					<an-icon .template="${spotifyIconTemplate}"></an-icon>
 					<span>Spotify</span>
 				</an-button>
-			</a>-->
+			</a>
 			<a href="https://www.linkedin.com/in/andreasmehlsen" target="_blank" rel="noopener">
 				<an-button style="--background: #0072B1; --foreground: var(--light);">
 					<an-icon .template="${linkedInIconTemplate}"></an-icon>

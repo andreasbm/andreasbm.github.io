@@ -526,8 +526,8 @@ class App extends LitElement {
 						<a aria-label="The Ego Tunnel link" href="https://www.amazon.com/Ego-Tunnel-Science-Mind-Myth/dp/0465020690" rel="noopener">
 							<an-media src="${mediaCover("the-ego-tunnel")}" .iconTemplate="${openIconTemplate}"></an-media>
 						</a>
-						<a aria-label="Two Door Cinema Club link" href="https://samharris.org/books/waking-up" rel="noopener">
-							<an-media src="${mediaCover("waking-up")}" .iconTemplate="${openIconTemplate}"></an-media>
+						<a aria-label="The Path of No Resistance link" href="https://www.amazon.com/Path-No-Resistance-Overcoming-Simpler/dp/1626341176" rel="noopener">
+							<an-media src="${mediaCover("path-of-no-resistance")}" .iconTemplate="${openIconTemplate}"></an-media>
 						</a>
 					</div>
 				</an-card>
@@ -536,8 +536,8 @@ class App extends LitElement {
 				<an-card class="card" id="podcast-card">
 					<an-section-header center headline="My favorite podcasts" text="Every day when I bike through Copenhagen I enjoy listening to podcasts. Here are some of my favorites!"></an-section-header>
 					<div class="media-grid">
-						<a aria-label="Making Sense link" href="https://open.spotify.com/show/5rgumWEx4FsqIY8e1wJNAk?si=w2cyVtAiTHmaH8mI-O1lSg" rel="noopener">
-							<an-media src="${mediaCover("making-sense")}"></an-media>
+						<a aria-label="Darknet Diaries link" href="https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5?si=zc5dOe4NQM2-Gc2YHNsFyQ" rel="noopener">
+							<an-media src="${mediaCover("darknet")}"></an-media>
 						</a>
 						<a aria-label="Reply All link" href="https://open.spotify.com/show/7gozmLqbcbr6PScMjc0Zl4?si=BEO9nQ8aQCaHzzxNlNqNQQ" rel="noopener">
 							<an-media src="${mediaCover("reply-all")}"></an-media>

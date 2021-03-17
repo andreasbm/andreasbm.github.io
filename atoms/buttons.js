@@ -15,7 +15,7 @@ export class Buttons extends LitElement {
 					margin: 0 var(--spacing-xxl) 0 0;
 				}
 				
-				@media (max-width: 770px) {
+				@media (max-width: 1000px) {
 					:host {
 						flex-direction: column;
 						align-items: stretch;
