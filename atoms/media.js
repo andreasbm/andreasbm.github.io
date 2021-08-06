@@ -23,6 +23,7 @@ export class Media extends Card {
 					height: var(--media-height, 200px);
 					color: var(--light);
 					cursor: pointer;
+                    background-color: white;
 				}
 				
 				#img, #overlay {
@@ -57,6 +58,13 @@ export class Media extends Card {
 				:host(:hover) #overlay, :host(:hover) #icon {
 					opacity: 1;
 				}
+
+
+			     @media (max-width: 1000px) {
+					#img {
+                      object-fit: contain;
+					}
+			     }
 			`
 		];
 	}
