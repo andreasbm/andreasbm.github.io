@@ -30,7 +30,7 @@ class Footer extends LitElement {
 	render () {
 		return html`
 			<footer id="footer">
-				<span>©2020 - Andreas Mehlsen - <a id="email" href="mailto:andmehlsen@gmail.com" rel="noopener" aria-label="Open email">andmehlsen@gmail.com</a></span>
+				<span>©2021 - Andreas Mehlsen - <a id="email" href="mailto:andmehlsen@gmail.com" rel="noopener" aria-label="Open email">andmehlsen@gmail.com</a></span>
 			</footer>
 		`;
 	}

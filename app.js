@@ -421,11 +421,11 @@ class App extends LitElement {
 				</an-project>
 				
 				<!-- Perfect Playlist -->
-				<an-project
+				<!-- <an-project
 					class="card"
 					style="--theme-600: #1DB954; --theme-600-contrast: var(--light);"
-					cover="${projectCover("perfectplaylist")}"
-					logo="${projectLogo("perfectplaylist")}"
+					cover="$ {projectCover("perfectplaylist")}"
+					logo="$ {projectLogo("perfectplaylist")}"
 					date="2019"
 					name="Perfect Playlist"
 					text="Create the perfect playlist based on you and your friends favorite music.">
@@ -433,11 +433,11 @@ class App extends LitElement {
 						<a href="https://perfectplaylist.app" rel="noopener" aria-label="Perfect Playlist link">
 							<an-button style="--background: #1DB954; --foreground: var(--light);">
 								<span>Go to website</span>
-								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+								<an-icon .template="$ {arrowRightIconTemplate}"></an-icon>
 							</an-button>
 						</a>
 					</an-buttons>
-				</an-project>
+				</an-project>-->
 				
 				<!-- Wordbase -->
 				<an-project
