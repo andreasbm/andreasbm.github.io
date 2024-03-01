@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"scripts": {
 		"clean:dist": "rimraf dist",
-		"start": "vite",
+		"start": "npx vite",
 		"build": "npm run clean-dist && npx vite build --manifest --outDir dist/ --assetsDir src/ && npm run copy-assets",
 		"clean-dist": "rm -rf dist",
 		"copy-assets": "cp -rv assets/ dist/assets"
@@ -11,8 +11,5 @@
 	"dependencies": {
 		"lit": "^3.1.1",
 		"web-dialog": "^0.0.11"
-	},
-	"devDependencies": {
-		"vite": "^5.0.11"
 	}
 }
