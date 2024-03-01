@@ -2,7 +2,7 @@ import {Card} from "../atoms/card.js";
 import "./../atoms/button.js";
 import "./../atoms/icon.js";
 import "./../atoms/text.js";
-import {css, html} from "./../web_modules/lit-element.js";
+import {css, html} from "lit";
 
 class Project extends Card {
 	static get properties () {

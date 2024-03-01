@@ -1,7 +1,7 @@
 import "./../atoms/disco-ball.js";
 import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
-import {repeat} from "./../web_modules/lit-html/directives/repeat.js";
+import {css, html, LitElement} from "lit";
+import {repeat} from "lit/directives/repeat.js";
 
 function randomPosition () {
 	return {

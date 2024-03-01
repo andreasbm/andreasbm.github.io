@@ -1,5 +1,5 @@
 import {playIconTemplate} from "../icons.js";
-import {css, html} from "./../web_modules/lit-element.js";
+import {css, html} from "lit";
 import {Card} from "./card.js";
 
 export class Media extends Card {

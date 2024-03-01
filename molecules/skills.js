@@ -2,7 +2,7 @@ import {codeIconTemplate, designIconTemplate} from "../icons.js";
 import "./../atoms/icon.js";
 import "./../atoms/text.js";
 import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {css, html, LitElement} from "lit";
 
 class Skills extends LitElement {
 	static get styles () {

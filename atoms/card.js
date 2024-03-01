@@ -1,5 +1,5 @@
 import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {css, html, LitElement} from "lit";
 
 export class Card extends LitElement {
 	static get styles () {

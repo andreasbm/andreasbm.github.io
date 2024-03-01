@@ -109,10 +109,6 @@ body {
 		--spacing-xxxxxl: 2.57rem; /*36px;*/
 		--spacing-xxxxxxl: 2.85rem; /*40px;*/
 	}
-
-	laser-cat {
-		display: none;
-	}
 }
 
 /*@media (prefers-color-scheme: dark) {*/

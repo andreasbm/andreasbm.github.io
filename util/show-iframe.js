@@ -1,7 +1,7 @@
-import {html, render} from "./../web_modules/lit-html.js";
+import {html, render} from "lit";
 
 export async function showIframe ({href}) {
-	import("./../web_modules/web-dialog.js").then(({openDialog}) => {
+	import("web-dialog").then(({openDialog}) => {
 		openDialog({
 			center: true,
 			$content: $dialog => render(html`

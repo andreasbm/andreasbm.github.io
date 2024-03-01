@@ -1,7 +1,7 @@
 import {coffeeIconTemplate} from "../icons.js";
 import "./icon.js";
 import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {css, html, LitElement} from "lit";
 
 class CoffeeCup extends LitElement {
 

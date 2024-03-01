@@ -2,30 +2,15 @@
 	"name": "andreas",
 	"version": "1.0.0",
 	"scripts": {
-		"serve": "npx servor . index.html 1337 --browse",
-		"s": "npm run serve",
-		"snowpack": "npx snowpack --optimize",
-		"postinstall": "npm run snowpack",
 		"clean:dist": "rimraf dist",
 		"start": "vite",
 		"build": "vite build"
 	},
 	"dependencies": {
-		"lit-element": "^2.3.1",
-		"web-dialog": "0.0.11"
+		"lit": "^3.1.1",
+		"web-dialog": "^0.0.11"
 	},
 	"devDependencies": {
-		"snowpack": "^1.6.0"
-	},
-	"snowpack": {
-		"dedupe": [
-			"lit-html"
-		],
-		"webDependencies": [
-			"lit-html",
-			"lit-element",
-			"web-dialog",
-			"lit-html/directives/repeat.js"
-		]
+		"vite": "^5.0.11"
 	}
 }

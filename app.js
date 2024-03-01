@@ -23,7 +23,7 @@ import "./molecules/coffee-button.js";
 import {sharedStyles} from "./styles/shared.js";
 import {showRecapRedditVideo} from "./util/show-recap-reddit-video.js";
 import {showYoutubeVideo} from "./util/show-youtube-video.js";
-import {css, html, LitElement} from "./web_modules/lit-element.js";
+import {css, html, LitElement} from "lit";
 
 const ASSETS_BASE_PATH = `/assets`;
 const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
@@ -152,7 +152,6 @@ class App extends LitElement {
 
 		// Defer resources that are nice to have
 		setTimeout(() => {
-			import("./laser-cat/laser-cat.js").then();
 			import("./molecules/coffee-button.js").then();
 		}, 2000);
 	}

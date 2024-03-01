@@ -9,7 +9,7 @@ import "./../atoms/button.js";
 import "./../atoms/buttons.js";
 import "./../atoms/icon.js";
 import "./../atoms/text.js";
-import {css, html} from "./../web_modules/lit-element.js";
+import {css, html} from "lit";
 
 class SayHiButtons extends Buttons {
 	static get styles () {

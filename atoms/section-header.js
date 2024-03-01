@@ -1,6 +1,6 @@
 import {sharedStyles} from "../styles/shared.js";
 import "./../atoms/text.js";
-import {css, html, LitElement} from "./../web_modules/lit-element.js";
+import {css, html, LitElement} from "lit";
 import "./button.js";
 
 class SectionHeader extends LitElement {
