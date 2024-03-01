@@ -6,7 +6,9 @@
 		"s": "npm run serve",
 		"snowpack": "npx snowpack --optimize",
 		"postinstall": "npm run snowpack",
-		"clean:dist": "rimraf dist"
+		"clean:dist": "rimraf dist",
+		"start": "vite",
+		"build": "vite build"
 	},
 	"dependencies": {
 		"lit-element": "^2.3.1",
