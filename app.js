@@ -249,6 +249,48 @@ class App extends LitElement {
 			<an-container id="projects">
 				<an-text role="heading" aria-level="2" center margin="large">My Projects</an-text>
 				
+				<!-- Ideamap -->
+				<an-project
+					class="card"
+					style="--theme-600: #2bc28c; --theme-600-contrast: var(--light);"
+					cover="${projectCover("ideamap")}"
+					logo="${projectLogo("ideamap")}"
+					date="2024 - Present"
+					name="Ideamap"
+					text="A visual workspace for brainstorming where teams collaborate on ideas and use AI to boost their creativity.">
+					<an-buttons slot="footer">
+						<a href="https://ideamap.ai" rel="noopener" aria-label="Ideamap link">
+							<an-button style="--background: #2bc28c; --foreground: var(--light);">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+
+				<!-- Funk Factory -->
+				<an-project
+					class="card"
+					style="--theme-600: #FDBD2F; --theme-600-contrast: var(--dark);"
+					cover="${projectCover("funk-factory")}"
+					logo="${projectLogo("funk-factory")}"
+					date="2023 - Present"
+					name="AI Funk Factory"
+					text="Groovy songs with vocals. An experiment to see how far we can take AI and music.">
+					<an-buttons slot="footer">
+						<an-button style="--background: #c70c0c; --foreground: var(--light);" @click="${() => showYoutubeVideo({youtubeId: "KP1bzEgCyn0"})}">
+							<span>Listen to a groovy AI song</span>
+							<an-icon .template="${videoIconTemplate}"></an-icon>
+						</an-button>
+						<a href="https://www.youtube.com/channel/UCjtu2TeeeGI4aPG9PEDBNHQ" rel="noopener" aria-label="Web Skills link">
+							<an-button style="--background: var(--dark); --foreground: #FDBD2F;">
+								<span>Go to website</span>
+								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+							</an-button>
+						</a>
+					</an-buttons>
+				</an-project>
+				
 				<!-- Web skills -->
 				<an-project
 					class="card"
@@ -321,11 +363,11 @@ class App extends LitElement {
 					style="--theme-600: #354D8D; --theme-600-contrast: var(--light);"
 					cover="${projectCover("weightless")}"
 					logo="${projectLogo("weightless")}"
-					date="2019 - Present"
+					date="2019 - 2023"
 					name="Weightless"
 					text="High quality web components with a small footprint.">
 					<an-buttons slot="footer">
-						<a href="https://weightless.dev" rel="noopener" aria-label="Weightless link">
+						<a href="https://github.com/andreasbm/weightless" rel="noopener" aria-label="Weightless link">
 							<an-button style="--background: #354D8D; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -411,7 +453,7 @@ class App extends LitElement {
 							<span>Watch a Recap video</span>
 							<an-icon .template="${videoIconTemplate}"></an-icon>
 						</an-button>
-						<a href="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener" aria-label="Recap Reddit extension link">
+						<a href="https://recap-reddit.web.app" href_old="https://chrome.google.com/webstore/detail/recap-reddit/jfinbpmbkoondiikpmhdejnacmdpnahc" rel="noopener" aria-label="Recap Reddit link">
 							<an-button style="--background: #FF4300; --foreground: var(--light);">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
@@ -523,11 +565,11 @@ class App extends LitElement {
 						<a aria-label="Badass link" href="https://www.amazon.com/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019" rel="noopener">
 							<an-media src="${mediaCover("badass")}" .iconTemplate="${openIconTemplate}"></an-media>
 						</a>
-						<a aria-label="The Ego Tunnel link" href="https://www.amazon.com/Ego-Tunnel-Science-Mind-Myth/dp/0465020690" rel="noopener">
-							<an-media src="${mediaCover("the-ego-tunnel")}" .iconTemplate="${openIconTemplate}"></an-media>
+						<a aria-label="Non-Designer's Design Book link" href="https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151" rel="noopener">
+							<an-media src="${mediaCover("non-designers-design-book")}" .iconTemplate="${openIconTemplate}"></an-media>
 						</a>
-						<a aria-label="The Path of No Resistance link" href="https://www.amazon.com/Path-No-Resistance-Overcoming-Simpler/dp/1626341176" rel="noopener">
-							<an-media src="${mediaCover("path-of-no-resistance")}" .iconTemplate="${openIconTemplate}"></an-media>
+						<a aria-label="Hooked link" href="https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products-ebook/dp/B00LMGLXTS" rel="noopener">
+							<an-media src="${mediaCover("hooked")}" .iconTemplate="${openIconTemplate}"></an-media>
 						</a>
 					</div>
 				</an-card>
