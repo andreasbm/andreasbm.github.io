@@ -4,7 +4,9 @@
 	"scripts": {
 		"clean:dist": "rimraf dist",
 		"start": "vite",
-		"build": "vite build"
+		"build": "npm run clean-dist && npx vite build --manifest --outDir dist/ --assetsDir src/ && npm run copy-assets",
+		"clean-dist": "rm -rf dist",
+		"copy-assets": "cp -rv assets/ dist/assets"
 	},
 	"dependencies": {
 		"lit": "^3.1.1",

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "target": "ES2019",
+    "lib": ["ES2019", "ES2020", "ES2021", "ES2022", "DOM"],
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "allowSyntheticDefaultImports": true
+  },
+}
