@@ -1,6 +1,6 @@
 import {html, render} from "lit";
 
-export async function showIframe ({href}) {
+export async function showIframe ({href}: {href: string}) {
 	import("web-dialog").then(({openDialog}) => {
 		openDialog({
 			center: true,
@@ -8,7 +8,7 @@ export async function showIframe ({href}) {
 				<style>
 					#video {
 						width: 100%;
-						height: 420px;
+						height: 600px;
 						outline: none;
 					}
 					

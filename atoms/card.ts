@@ -1,4 +1,4 @@
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
 
 export class Card extends LitElement {

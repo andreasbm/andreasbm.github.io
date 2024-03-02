@@ -1,15 +1,9 @@
-import {coffeeIconTemplate} from "../icons.js";
-import "./icon.js";
-import {sharedStyles} from "./../styles/shared.js";
+import {coffeeIconTemplate} from "../icons";
+import "./icon";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
 
 class CoffeeCup extends LitElement {
-
-	static get properties () {
-		return {
-		}
-	}
-
 	static get styles () {
 		return [
 			sharedStyles,

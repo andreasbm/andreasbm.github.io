@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 
 export class Buttons extends LitElement {
 	static get styles () {
@@ -30,7 +30,7 @@ export class Buttons extends LitElement {
 						margin: 0 0 var(--spacing-l);
 					}
 					
-					::slotted(:first-child:last-child), :host > :first-child:last-child (
+					::slotted(:first-child:last-child), :host > :first-child:last-child {
 						margin: 0;
 					}
 				}

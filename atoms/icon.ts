@@ -1,15 +1,9 @@
-import {sharedStyles} from "./../styles/shared.js";
-import {css, html, LitElement} from "lit";
+import {sharedStyles} from "../styles/shared";
+import {css, html, LitElement, TemplateResult} from "lit";
+import {property} from "lit/decorators/property.js";
 
 class Icon extends LitElement {
-
-	static get properties () {
-		return {
-			template: {
-				type: Object
-			}
-		}
-	}
+	@property({type: Object}) template!: TemplateResult;
 
 	static get styles () {
 		return [

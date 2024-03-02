@@ -1,21 +1,11 @@
-import "./../atoms/button.js";
-import "./../atoms/icon.js";
-import "./../atoms/text.js";
-import {sharedStyles} from "./../styles/shared.js";
+import "../atoms/button";
+import "../atoms/icon";
+import "../atoms/text";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
+import {property} from "lit/decorators/property.js";
 
 class Contact extends LitElement {
-	static get properties () {
-		return {
-			headline: {
-				type: String
-			},
-			text: {
-				type: String
-			}
-		}
-	}
-
 	static get styles () {
 		return [
 			sharedStyles,
@@ -26,6 +16,9 @@ class Contact extends LitElement {
 			`
 		];
 	}
+
+	@property({type: String}) headline: string | undefined;
+	@property({type: String}) text: string | undefined;
 
 	render () {
 		return html`

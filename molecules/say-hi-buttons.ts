@@ -1,20 +1,20 @@
-import {Buttons} from "../atoms/buttons.js";
+import {Buttons} from "../atoms/buttons";
 import {
 	githubIconTemplate,
 	instagramIconTemplate,
 	linkedInIconTemplate, spotifyIconTemplate,
 	twitterIconTemplate
-} from "../icons.js";
-import "./../atoms/button.js";
-import "./../atoms/buttons.js";
-import "./../atoms/icon.js";
-import "./../atoms/text.js";
+} from "../icons";
+import "../atoms/button";
+import "../atoms/buttons";
+import "../atoms/icon";
+import "../atoms/text";
 import {css, html} from "lit";
 
 class SayHiButtons extends Buttons {
 	static get styles () {
 		return [
-			super.styles,
+			...super.styles,
 			css`
 				:host {
 					width: 100%;

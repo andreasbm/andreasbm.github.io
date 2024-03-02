@@ -1,7 +1,8 @@
-import "./../atoms/disco-ball.js";
-import {sharedStyles} from "./../styles/shared.js";
+import "../atoms/disco-ball";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
 import {repeat} from "lit/directives/repeat.js";
+import {property} from "lit/decorators/property.js";
 
 function randomPosition () {
 	return {
@@ -10,24 +11,14 @@ function randomPosition () {
 	}
 }
 
-function setRandomPosition ($elem) {
+function setRandomPosition ($elem: HTMLElement) {
 	const {left, top} = randomPosition();
 	$elem.style.top = `${top}%`;
 	$elem.style.left = `${left}%`;
 }
 
 const STARS = [...Array(10)];
-class Party extends LitElement {
-
-	static get properties () {
-		return {
-			party: {
-				type: Boolean,
-				reflect: true
-			}
-		}
-	}
-
+export class Party extends LitElement {
 	static get styles () {
 		return [
 			sharedStyles,
@@ -92,8 +83,10 @@ class Party extends LitElement {
 		];
 	}
 
-	starIterationComplete (e) {
-		setRandomPosition(e.target);
+	@property({type: Boolean, reflect: true}) party = false;
+
+	starIterationComplete (e: AnimationEvent) {
+		setRandomPosition(e.target as HTMLElement);
 	}
 
 	render () {

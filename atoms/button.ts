@@ -1,5 +1,5 @@
-import { LitElement, html, css } from "lit";
-import {sharedStyles} from "./../styles/shared.js";
+import {LitElement, html, css, PropertyValues} from "lit";
+import {sharedStyles} from "../styles/shared";
 
 class Button extends LitElement {
 	static get styles () {
@@ -46,8 +46,8 @@ class Button extends LitElement {
 		];
 	}
 
-	constructor () {
-		super();
+	protected firstUpdated(props: PropertyValues) {
+		super.firstUpdated(props);
 		this.tabIndex = 0;
 		this.role = "button";
 	}

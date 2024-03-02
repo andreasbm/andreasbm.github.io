@@ -1,30 +1,8 @@
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
+import {property} from "lit/decorators/property.js";
 
 class Text extends LitElement {
-
-	static get properties () {
-		return {
-			heading: {
-				type: String,
-				reflect: true
-			},
-			ariaLevel: {
-				type: String,
-				attribute: "aria-level",
-				reflect: true
-			},
-			center: {
-				type: Boolean,
-				reflect: true
-			},
-			margin: {
-				type: String,
-				reflect: true
-			}
-		}
-	}
-
 	static get styles () {
 		return [
 			sharedStyles,
@@ -62,6 +40,11 @@ class Text extends LitElement {
 			`
 		];
 	}
+
+	@property({type: String, reflect: true}) heading = "";
+	@property({type: String, attribute: "aria-level", reflect: true}) ariaLevel = "";
+	@property({type: Boolean, reflect: true}) center = false;
+	@property({type: String, reflect: true}) margin = "";
 
 	render () {
 		return html`<slot></slot>`;

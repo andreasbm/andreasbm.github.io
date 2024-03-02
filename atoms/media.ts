@@ -1,22 +1,15 @@
-import {playIconTemplate} from "../icons.js";
-import {css, html} from "lit";
-import {Card} from "./card.js";
+import {playIconTemplate} from "../icons";
+import {css, html, TemplateResult} from "lit";
+import {Card} from "./card";
+import {property} from "lit/decorators/property.js";
 
 export class Media extends Card {
-	static get properties () {
-		return {
-			src: {
-				type: String
-			},
-			iconTemplate: {
-				type: Object
-			}
-		}
-	}
+	@property({type: String}) src: string | null = null;
+	@property({type: Object}) iconTemplate?: TemplateResult;
 
 	static get styles () {
 		return [
-			super.styles,
+			...super.styles,
 			css`
 				:host {
 					width: var(--media-width, 200px);

@@ -1,7 +1,7 @@
-import {codeIconTemplate, designIconTemplate} from "../icons.js";
-import "./../atoms/icon.js";
-import "./../atoms/text.js";
-import {sharedStyles} from "./../styles/shared.js";
+import {codeIconTemplate, designIconTemplate} from "../icons";
+import "../atoms/icon";
+import "../atoms/text";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
 
 class Skills extends LitElement {

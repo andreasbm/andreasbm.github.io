@@ -1,16 +1,10 @@
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
+import {property} from "lit/decorators/property.js";
 
 class Container extends LitElement {
 
-	static get properties () {
-		return {
-			size: {
-				type: String,
-				reflect: true
-			}
-		}
-	}
+	@property({type: String, reflect: true}) size: "small" | "medium" = "medium";
 
 	static get styles () {
 		return [

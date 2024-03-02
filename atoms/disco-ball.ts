@@ -1,8 +1,7 @@
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
 
 class DiscoBall extends LitElement {
-
 	static get styles () {
 		return [
 			sharedStyles,

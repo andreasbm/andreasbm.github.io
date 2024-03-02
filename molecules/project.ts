@@ -1,33 +1,14 @@
-import {Card} from "../atoms/card.js";
-import "./../atoms/button.js";
-import "./../atoms/icon.js";
-import "./../atoms/text.js";
+import {Card} from "../atoms/card";
+import "../atoms/button";
+import "../atoms/icon";
+import "../atoms/text";
 import {css, html} from "lit";
+import {property} from "lit/decorators/property.js";
 
 class Project extends Card {
-	static get properties () {
-		return {
-			cover: {
-				type: String
-			},
-			logo: {
-				type: String
-			},
-			date: {
-				type: String
-			},
-			name: {
-				type: String
-			},
-			text: {
-				type: String
-			}
-		}
-	}
-
 	static get styles () {
 		return [
-			super.styles,
+			...super.styles,
 			css`
 				:host {
 					background: var(--theme-600);
@@ -110,6 +91,12 @@ class Project extends Card {
 			`
 		];
 	}
+
+	@property({type: String}) cover: string | null = null;
+	@property({type: String}) logo: string | null = null;
+	@property({type: String}) date: string | null = null;
+	@property({type: String}) name: string | null = null;
+	@property({type: String}) text: string | null = null;
 
 	render () {
 		return html`

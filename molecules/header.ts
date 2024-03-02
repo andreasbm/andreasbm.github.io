@@ -1,23 +1,9 @@
-import "./../atoms/text.js";
-import {sharedStyles} from "./../styles/shared.js";
+import "../atoms/text";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
+import {property} from "lit/decorators/property.js";
 
-class Header extends LitElement {
-	static get properties () {
-		return {
-			img: {
-				type: String
-			},
-			text: {
-				type: String
-			},
-			pause: {
-				type: Boolean,
-				reflect: true
-			}
-		}
-	}
-
+export class Header extends LitElement {
 	static get styles () {
 		return [
 			sharedStyles,
@@ -126,20 +112,24 @@ class Header extends LitElement {
 		];
 	}
 
-	ready () {
+	@property({type: String}) img: string | undefined;
+	@property({type: String}) text: string | undefined;
+	@property({type: Boolean, reflect: true}) pause = false;
+
+	setReady () {
 		this.classList.add("ready");
 	}
 
-	onAvatarLoaded (e) {
-		const $element = e.target;
+	onAvatarLoaded (e: Event) {
+		const $element = e.target as HTMLElement;
 		if ("animate" in $element) {
-			e.target.animate({
+			$element.animate({
 				transform: [`scale(0)`, `scale(1)`],
 				opacity: [`0`, `1`]
-			}, {duration: 200, easing: "ease-out"}).onfinish = this.ready.bind(this);
+			}, {duration: 200, easing: "ease-out"}).onfinish = this.setReady.bind(this);
 
 		} else {
-			this.ready();
+			this.setReady();
 		}
 	}
 

@@ -1,22 +1,13 @@
-import {sharedStyles} from "../styles/shared.js";
-import "./../atoms/text.js";
+import {sharedStyles} from "../styles/shared";
+import "./text";
 import {css, html, LitElement} from "lit";
-import "./button.js";
+import "./button";
+import {property} from "lit/decorators/property.js";
 
 class SectionHeader extends LitElement {
-	static get properties () {
-		return {
-			headline: {
-				type: String
-			},
-			text: {
-				type: String
-			},
-			center: {
-				type: Boolean
-			}
-		}
-	}
+	@property({type: String}) headline: string | undefined;
+	@property({type: String}) text: string | undefined;
+	@property({type: Boolean}) center: boolean | undefined;
 
 	static get styles () {
 		return [

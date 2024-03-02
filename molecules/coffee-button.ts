@@ -1,20 +1,9 @@
-import {sharedStyles} from "./../styles/shared.js";
+import {sharedStyles} from "../styles/shared";
 import {css, html, LitElement} from "lit";
-import "./../atoms/coffee-cup.js";
+import "../atoms/coffee-cup";
+import {property} from "lit/decorators/property.js";
 
 class CoffeeButton extends LitElement {
-
-	static get properties () {
-		return {
-			href: {
-				type: String
-			},
-			message: {
-				type: String
-			}
-		}
-	}
-
 	static get styles () {
 		return [
 			sharedStyles,
@@ -94,6 +83,9 @@ class CoffeeButton extends LitElement {
 			`
 		];
 	}
+
+	@property({type: String}) href: string | undefined;
+	@property({type: String}) message: string | undefined;
 
 	render () {
 		return html`
