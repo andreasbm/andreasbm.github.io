@@ -41,7 +41,6 @@ class Text extends LitElement {
 		];
 	}
 
-	@property({type: String, reflect: true}) heading = "";
 	@property({type: String, attribute: "aria-level", reflect: true}) ariaLevel = "";
 	@property({type: Boolean, reflect: true}) center = false;
 	@property({type: String, reflect: true}) margin = "";

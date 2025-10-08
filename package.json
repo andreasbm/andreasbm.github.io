@@ -9,7 +9,7 @@
 		"copy-assets": "cp -rv assets/ dist/assets"
 	},
 	"dependencies": {
-		"lit": "^3.1.1",
+		"lit": "^3.3.1",
 		"web-dialog": "^0.0.11"
 	}
 }

@@ -57,6 +57,8 @@ html {
 	--yellow-500-contrast: var(--dark);
 	--yellow-600-contrast: var(--dark);
 
+    --sun-rays: #121341;
+
 	--container-width-s: 500px;
 	--container-width-m: 900px;
 	--container-width-l: 1100px;

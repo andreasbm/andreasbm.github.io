@@ -49,12 +49,12 @@ class Skills extends LitElement {
 			<div class="code">
 				<an-icon class="icon" .template="${codeIconTemplate}"></an-icon>
 				<an-text class="title" role="heading" aria-level="2" center margin="medium">Web Development</an-text>
-				<an-text class="text" center>I have a great love for building fast, modern, mobile-ready websites. I have been building website for a decade which shines through in my projects.</an-text>
+				<an-text class="text" center>I’m passionate about building fast, modern, mobile-ready websites. With over a decade of experience, I take pride in creating clean, high-performing web experiences that stand out.</an-text>
 			</div>
 			<div class="design">
 				<an-icon class="icon" .template="${designIconTemplate}"></an-icon>
 				<an-text class="title" role="heading" aria-level="2" center margin="medium">Design</an-text>
-				<an-text class="text" center>Design is at the core of every projects I make. I believe the best user experiences are achieved when building beautiful experiences for actual people.</an-text>
+				<an-text class="text" center>Design is at the heart of everything I create. It’s more than just how something looks; it’s how it feels, how it flows, and how it connects with people.</an-text>
 			</div>
 		`;
 	}

@@ -7,12 +7,14 @@ import "./atoms/section-header";
 import "./atoms/text";
 import "./atoms/coffee-cup";
 import {
-	arrowDownIconTemplate,
-	arrowRightIconTemplate,
-	githubIconTemplate,
-	openIconTemplate,
-	twitterIconTemplate,
-	videoIconTemplate
+    appleIconTemplate,
+    arrowDownIconTemplate,
+    arrowRightIconTemplate,
+    githubIconTemplate,
+    linkedInIconTemplate,
+    openIconTemplate,
+    twitterIconTemplate,
+    videoIconTemplate
 } from "./icons";
 import "./molecules/footer";
 import "./molecules/header";
@@ -26,28 +28,15 @@ import {query} from "lit/decorators/query.js";
 import {Header} from "./molecules/header";
 import {Party} from "./molecules/party";
 import {showYoutubeVideo} from "./util/show-youtube-video";
-import {showRecapRedditVideo} from "./util/show-recap-reddit-video";
+import { showTerms } from "./util/show-terms";
+import { mediaCover, projectCover, projectLogo } from "./util/project-util";
+import { ProjectId } from "./model/project";
 
-const ASSETS_BASE_PATH = `/assets`;
-const PROJECT_ASSETS_BASE_PATH = `${ASSETS_BASE_PATH}/projects`;
+
 const GA_MEASUREMENT_ID = "UA-96179028-10";
 const COFFEE_LINK = "https://buymeacoff.ee/AndreasMehlsen";
 
-function projectPath (id: string, extra: string) {
-	return `${PROJECT_ASSETS_BASE_PATH}/${id}${extra != null ? `/${extra}` : ""}`;
-}
 
-function projectCover (id: string) {
-	return projectPath(id, "cover.jpg");
-}
-
-function projectLogo (id: string) {
-	return projectPath(id, "logo.svg");
-}
-
-function mediaCover (id: string) {
-	return `${ASSETS_BASE_PATH}/media/${id}.jpg`;
-}
 
 class App extends LitElement {
 	static get styles () {
@@ -156,6 +145,11 @@ class App extends LitElement {
 	firstUpdated (e: PropertyValues) {
 		super.firstUpdated(e);
 
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("terms")) {
+            showTerms(params.get("terms") as ProjectId);
+        }
+
 		// Defer resources that are nice to have
 		setTimeout(() => {
 			import("./molecules/coffee-button").then();
@@ -212,7 +206,7 @@ class App extends LitElement {
 		return html`
 			<!-- Header -->
 			<an-header id="header" img="assets/andreas.png"
-					   text="Hi, I'm Andreas. I love building awesome things for the Web.">
+					   text="Hi, I’m Andreas. I build fun and useful things for the web.">
 				<an-buttons slot="footer">
 					<an-button id="projects-button" style="--background: #6D73DB; --foreground: var(--light);"
 							   @click="${() => this.scrollToProjects()}">
@@ -225,11 +219,11 @@ class App extends LitElement {
 							<span>Go to my Github</span>
 						</an-button>
 					</a>
-					<a href="https://twitter.com/AndreasMehlsen" rel="noopener" aria-label="Say hi">
+					<a href="https://www.linkedin.com/in/andreasmehlsen" rel="noopener" aria-label="Say hi">
 						<an-button id="contact-button"
 								   style="--background: var(--yellow-500); --foreground: var(--yellow-500-contrast)">
-							<span>Say hi on Twitter</span>
-							<an-icon .template="${twitterIconTemplate}"></an-icon>
+							<span>Say hi on LinkedIn</span>
+							<an-icon .template="${linkedInIconTemplate}"></an-icon>
 						</an-button>
 					</a>
 				</an-buttons>
@@ -238,13 +232,32 @@ class App extends LitElement {
 			<!-- Info -->
 			<an-container id="info-container" size="small">
 				<an-text center>I'm a web developer from Denmark. I love building new exciting things for the Web. When
-					I'm not busy working on various projects, you'll find me playing piano or watching cat videos.
+					I'm not busy working on various projects, you'll find me playing piano or sketching new ideas.
 				</an-text>
 			</an-container>
 
 			<!-- Projects -->
 			<an-container id="projects">
 				<an-text role="heading" aria-level="2" center margin="large">My Projects</an-text>
+
+                <!-- JLPT Drills -->
+                <an-project
+                        class="card"
+                        style="--theme-600: #0e0e0e; --theme-600-contrast: var(--light);"
+                        cover="${projectCover("jlptdrills")}"
+                        logo="${projectLogo("jlptdrills")}"
+                        date="2025 - Present"
+                        name="JLPT Drills"
+                        text="A study app that helps Japanese learners prepare for the JLPT N5 exam with over 1,000 mock questions.">
+                    <an-buttons slot="footer">
+                        <a href="https://apps.apple.com/app/id6752223224" rel="noopener" aria-label="JLPT Drills link">
+                            <an-button style="--background: #D93635; --foreground: var(--light);">
+                                <span>Go to App Store</span>
+                                <an-icon .template="${appleIconTemplate}"></an-icon>
+                            </an-button>
+                        </a>
+                    </an-buttons>
+                </an-project>
 
 				<!-- Ideamap -->
 				<an-project
@@ -258,31 +271,6 @@ class App extends LitElement {
 					<an-buttons slot="footer">
 						<a href="https://ideamap.ai" rel="noopener" aria-label="Ideamap link">
 							<an-button style="--background: #2bc28c; --foreground: var(--light);">
-								<span>Go to website</span>
-								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
-							</an-button>
-						</a>
-					</an-buttons>
-				</an-project>
-
-				<!-- Funk Factory -->
-				<an-project
-					class="card"
-					style="--theme-600: #FDBD2F; --theme-600-contrast: var(--dark);"
-					cover="${projectCover("funk-factory")}"
-					logo="${projectLogo("funk-factory")}"
-					date="2023 - Present"
-					name="AI Funk Factory"
-					text="Groovy songs with vocals. An experiment to see how far we can take AI and music.">
-					<an-buttons slot="footer">
-						<an-button style="--background: #c70c0c; --foreground: var(--light);"
-								   @click="${() => showYoutubeVideo({youtubeId: "KP1bzEgCyn0"})}">
-							<span>Listen to a groovy AI song</span>
-							<an-icon .template="${videoIconTemplate}"></an-icon>
-						</an-button>
-						<a href="https://www.youtube.com/channel/UCjtu2TeeeGI4aPG9PEDBNHQ" rel="noopener"
-						   aria-label="Web Skills link">
-							<an-button style="--background: var(--dark); --foreground: #FDBD2F;">
 								<span>Go to website</span>
 								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
 							</an-button>
@@ -308,7 +296,6 @@ class App extends LitElement {
 						</a>
 					</an-buttons>
 				</an-project>
-
 
 				<!-- Ideanote -->
 				<an-project
@@ -443,28 +430,28 @@ class App extends LitElement {
 				</an-project>
 
 				<!-- Recap Reddit -->
-				<an-project
+				<!--<an-project
 					class="card"
 					style="--theme-600: #BF3707; --theme-600-contrast: var(--light);"
-					cover="${projectCover("recapreddit")}"
-					logo="${projectLogo("recapreddit")}"
+					cover="$ {projectCover("recapreddit")}"
+					logo="$ {projectLogo("recapreddit")}"
 					date="2020"
 					name="Recap Reddit"
 					text="Automatically turn Reddit posts into recap videos.">
 					<an-buttons slot="footer">
 						<an-button style="--background: #1A1A1C; --foreground: var(--light);"
-								   @click="${() => showRecapRedditVideo({post: "https://www.reddit.com/r/AskReddit/comments/a72nr4/whats_something_small_you_can_start_doing_today"})}">
+								   @click="$ {() => showRecapRedditVideo({post: "https://www.reddit.com/r/AskReddit/comments/a72nr4/whats_something_small_you_can_start_doing_today"})}">
 							<span>Watch a Recap video</span>
-							<an-icon .template="${videoIconTemplate}"></an-icon>
+							<an-icon .template="$ {videoIconTemplate}"></an-icon>
 						</an-button>
 						<a href="https://recap-reddit.web.app" rel="noopener" aria-label="Recap Reddit link">
 							<an-button style="--background: #FF4300; --foreground: var(--light);">
 								<span>Go to website</span>
-								<an-icon .template="${arrowRightIconTemplate}"></an-icon>
+								<an-icon .template="$ {arrowRightIconTemplate}"></an-icon>
 							</an-button>
 						</a>
 					</an-buttons>
-				</an-project>
+				</an-project>-->
 
 				<!-- Perfect Playlist -->
 				<!-- <an-project
